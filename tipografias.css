@@ -1,0 +1,30 @@
+/*=====================================
+<-- 01. solutek Nav Menu Area Css -->
+=======================================*/
+@font-face {
+  font-family: 'LeagueSpartan-Bold';
+  src: url('./assets/css/font/LeagueSpartan-ExtraBold.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LeagueSpartan-Light';
+  src: url('./assets/css/font/LeagueSpartan-Light.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LeagueSpartan-Medium';
+  src: url('./assets/css/font/LeagueSpartan-Medium.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LeagueSpartan-Regular';
+  src: url('./assets/css/font/LeagueSpartan-Regular.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
