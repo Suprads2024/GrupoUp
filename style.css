@@ -503,8 +503,8 @@ nav.solutek_menu span {
 =======================================*/
 
 .feature-area {
-  padding: 0 0 88px;
-  margin-top: -30px;
+
+  padding: 40px 0px;
 }
 
 .feature-box {
@@ -522,7 +522,7 @@ nav.solutek_menu span {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  margin-bottom: 30px;
+
   transition: 0.5s;
 }
 
@@ -652,7 +652,7 @@ h1.section-main-title {
 
 h1.section-main-title span {
   display: inline-block;
-  color: #ff3d00;
+  color: #1dae5a;
 }
 
 p.section-title-descr {
@@ -687,7 +687,7 @@ p.section-descr::before {
 }
 
 .testimonial-area h1.section-main-title {
-  color: #fff;
+  color: #050a1e;
 }
 
 .testimonial-area h5.section-sub-title {
@@ -895,7 +895,7 @@ h1.section-main-title2 {
 }
 
 .quote_button button {
-  background: #ff3d00;
+  background: #1dae5a;
   padding: 14px 48px 14px;
   border-radius: 30px;
   transition: 0.5s;
@@ -916,9 +916,9 @@ h1.section-main-title2 {
 
 .form_box input:focus,
 .form_box textarea:focus {
-  border-color: #ff3d00;
+  border-color: #001819;
   outline: 0;
-  box-shadow: 0 0 4px rgb(255, 61, 0, 0.5);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
 .quote_button button:hover {
@@ -1716,11 +1716,11 @@ h3.project-title a:hover {
 
 .brand-area {
   background: #cccccc;
-  padding: 41px 0;
-  margin: 0 49px 0;
+  padding: 31px 0;
+  margin: -150px 49px 0;
   left: 0;
   right: 0;
-  border-radius: 50px 50px 50px 50px;
+  border-radius:0px 0px 50px 50px;
 }
 
 .brand-box {
@@ -1914,7 +1914,7 @@ h3.faq-title {
 
 h3.faq-title span {
   display: inline-block;
-  color: #ff3c00;
+  color: #1DAE5A;
 }
 
 p.faq-description {
@@ -1959,7 +1959,7 @@ ul.accordion {
 .accordion a:before {
   width: 3px;
   height: 16px;
-  background: #ff3d00;
+  background: #1DAE5A;
   position: absolute;
   right: 32px;
   content: " ";
@@ -1972,7 +1972,7 @@ ul.accordion {
 .accordion a:after {
   width: 16px;
   height: 3px;
-  background: #ff3d00;
+  background: #1DAE5A;
   position: absolute;
   right: 26px;
   content: " ";
@@ -1985,7 +1985,7 @@ ul.accordion {
   transform: rotate(0deg);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  background: #ff3d00;
+  background: #001819;
   z-index: -1;
 }
 
