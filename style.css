@@ -1213,7 +1213,12 @@ h3.blog-title-two a:hover {
   z-index: 1;
   margin-left: -96px;
 }
-
+/* Ocultar imagen en celulares */
+@media (max-width: 767px) {
+  .about-thumb img {
+    display: none !important;
+  }
+}
 h4.about-title {
   position: absolute;
   bottom: 18%;
@@ -1511,50 +1516,23 @@ p.service-text {
   top: 0;
   right: 0;
 }
-/* Flotando con sombra */
-.service-shape img,
-.service-shape3 img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.25)); /* sombra flotante */
-  animation: float 2s ease-in-out infinite; /* animación */
-}
 
-/* Animación flotante */
-@keyframes float {
-  0% {
-    transform: translateY(0px);
+
+/* Mobile: mostrar imagen entera */
+@media (max-width: 480px) {
+  .service-single-box {
+    background-size: contain;   /* se muestra la imagen completa */
+    background-position: top center;
+    background-repeat: no-repeat;
+    min-height: auto;           /* dejamos que el contenido defina la altura */
+    height: auto;
+    padding: 30px 20px;
   }
-  50% {
-    transform: translateY(-15px); /* sube */
+
+
+  .service-content {
+    text-align: center;
   }
-  100% {
-    transform: translateY(0px); /* vuelve */
-  }
-}
-
-/* Para que no floten al mismo tiempo */
-.service-shape3 img {
-  animation-delay: 1s; /* empieza más tarde */
-}
-
-.service-shape2 {
-  position: absolute;
-  top: 16%;
-  left: 3%;
-}
-
-.service-shape2 img {
-  animation: dance 3s alternate infinite;
-  -webkit-animation: dance 2s alternate infinite;
-  animation: dance 3s alternate infinite;
-}
-
-.service-shape3 {
-  position: absolute;
-  top: 2%;
-  left: 0;
 }
 
 /*=====================================
