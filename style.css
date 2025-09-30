@@ -897,7 +897,7 @@ h1.section-main-title2 {
 .quote_button button {
   background: #1dae5a;
   padding: 14px 48px 14px;
-  border-radius: 30px;
+  border-radius: 15px;
   transition: 0.5s;
   font-size: 16px;
   color: #ffffff;
@@ -1290,7 +1290,7 @@ h4.about-title {
   font-weight: 600;
   position: relative;
   z-index: 1;
-  border-radius: 30px;
+  border-radius: 15px;
   transition: 0.5s;
 }
 
