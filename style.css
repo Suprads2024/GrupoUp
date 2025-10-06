@@ -3886,7 +3886,7 @@ ul.list-style-one li a:hover {
 
 @media (max-width: 575px) {
   .altura-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr ;
     gap: 10px;
   }
 
@@ -4226,7 +4226,7 @@ ul.list-style-one li a:hover {
 
   /* escalones apilados */
   .obj-logos {
-    height: 30px;
+    height: 58px;
   }
 }
 
@@ -4403,6 +4403,7 @@ ul.list-style-one li a:hover {
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: .3px;
+  line-height: 20px;
   color: #0c1a2b;
   font-size: clamp(16px, 1.6vw, 20px);
 }
@@ -4449,7 +4450,7 @@ ul.list-style-one li a:hover {
 
   .comprende-list li::after {
     left: 7px;
-    top: 24px;
+    top: 27px;
     width: 9px;
     height: 5px;
   }
@@ -4518,6 +4519,7 @@ ul.list-style-one li a:hover {
   .btn-presu {
     width: 100%;
     justify-content: center;
+    font-size: 14px;
   }
 }
 
@@ -6597,7 +6599,7 @@ li.list-arrow {
 
 
 
-/* ===== SERVICIO (SAFE UP) ===== */
+
 .service-area.safeup {
   --safeup-green: #1DAE5A;
   --navy: #0b1220;
@@ -7016,6 +7018,7 @@ li.list-arrow {
   text-transform: uppercase;
   font-size: clamp(14px, 1.9vw, 16px);
   letter-spacing: .3px;
+  line-height: 15px;
 }
 
 .cta-text {
@@ -7180,6 +7183,11 @@ li.list-arrow {
 /* <!--TERMINA SAFE UP  -- */
 /* <!--==================================================--> */
 
+
+
+/* <!--==================================================-- */
+/* <!-- ARRANCA TU DERECHO -- */
+/* <!--==================================================--> */
 .solutions-area.paintup {
   --safeup-green: #2071B6;
   /* primario Grupo UP */
@@ -7304,7 +7312,7 @@ li.list-arrow {
 @media (max-width: 575px) {
   .practice-areas { padding: 54px 0 48px; }
   .areas-title { font-size: 26px; }
-  .areas-subtitle { font-size: 15px; padding: 0 8px; }
+  .areas-subtitle { font-size: 15px; }
   .areas-list { grid-template-columns: 1fr; gap: 14px; }
   .area-card { padding: 16px; border-radius: 14px; }
   .area-heading { font-size: 17px; }
@@ -7402,6 +7410,15 @@ li.list-arrow {
   .commitment-title{ font-size: 24px; }
   .commitment-card::before{ font-size: 48px; left: 12px; top: -6px; }
 }
+
+
+
+/* <!--==================================================-- */
+/* <!-- TERMINA TU DERECHO -- */
+/* <!--==================================================--> */
+
+
+
 
 /* <!--==================================================-- */
 /* <!--start solutek about us Area -- */

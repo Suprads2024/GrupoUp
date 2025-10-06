@@ -3608,7 +3608,18 @@ h3.blog-details-title.two {
        background: url(../images/grupoup/paintup/cel.jpg);
  }
 }
+@media (max-width:786px){
+    .project-area.style-three{
+        padding: 60px 0 60px;
+        
+    }
 
+    .solutions-title {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+}
 /* small mobile :320px. */
 @media only screen and (min-width: 320px) and (max-width: 479px) {
 /* solutek home page one */
@@ -3770,9 +3781,12 @@ h3.testi-title {
 .faq-shape {
     display: none;
 }
-
+.project-area.style-three .section-title.text-left{
+    margin-bottom: 15px;
+}
 .section-title.text-left {
     margin-left: 10px;
+    margin-bottom: 20px;
 }
 
 .faq-thumb img {
@@ -4011,7 +4025,7 @@ h3.blog-title-two a {
 }
 
 .project-area.style-three {
-    margin: 0;
+margin: 50px 10px;
 }
 
 .project-area.style-three .project-bg-shape1 {
