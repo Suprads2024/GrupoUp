@@ -73,7 +73,7 @@ a.meanmenu-reveal {
   padding: 1em 5%;
   text-align: left;
   text-decoration: none;
-  text-transform: capitalize;
+  text-transform:uppercase;
   width: 90%;
   text-align: center;
 }
@@ -222,12 +222,30 @@ color: #1DAE5A!important;
   position: absolute;
   top: 10px;
   /* ajustá para centrar vertical */
-  left: 10px;
+  left: -10px;
   /* margen izquierdo */
   width: 160px;
   /* ancho del logo */
   height: 40px;
   /* alto del logo */
-  background: url("../images/grupoup/logo.png") no-repeat center;
+  background: url("../images/grupoup/Logo\ Grupo\ Up\ -\ PNG.png") no-repeat center;
   background-size: contain;
+}
+
+
+@media (max-width:580px){
+
+  .mean-container .mean-bar::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  /* ajustá para centrar vertical */
+  left: 0px;
+  /* margen izquierdo */
+  width: 200px;
+  /* ancho del logo */
+  height: 180px;
+
+}
+
 }
