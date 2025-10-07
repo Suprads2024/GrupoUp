@@ -42,6 +42,14 @@
 </head>
 
 <body>
+<!-- WhatsApp flotante -->
+<a class="wa-float"
+   href="https://wa.me/5493412421456?text=Hola%20Grupo%20UP!%20Quisiera%20un%20presupuesto."
+   target="_blank" rel="noopener"
+   aria-label="Escribinos por WhatsApp">
+  <img src="assets/images/whatsapp.png" alt="" />
+  <span class="wa-tooltip">Chateá con nosotros</span>
+</a>
 
 	<!--==================================================-->
 	<!-- Start solutek Main Menu Area -->
@@ -120,29 +128,55 @@
 	<!-- Start solutek breadcumb Area -->
 	<!--==================================================-->
 	<div class="breadcumb-area paint">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="breadcumb-content">
+  <div class="container">
+    <div class="hero-cleaning">
 
-						<!-- Logo paint up -->
-						<div class="breadcumb-logo">
-							<img src="assets/images/grupoup/paintup/logoblanco.png" alt="paint up">
-						</div>
+      <!-- Logo Paint Up -->
+      <div class="hero-brand">
+        <img src="assets/images/grupoup/paintup/logoblanco.png" alt="Paint Up">
+      </div>
 
-						<ul class="breadcumb-list">
-							<li><a href="index.html">Inicio</a></li>
-							<li class="list-arrow">&lt;</li>
-							<li>PAINT UP</li>
-						</ul>
+      <div class="hero-copy">
+        <h1>Especialistas en pintura profesional y duradera</h1>
 
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <p>Aplicamos técnicas seguras y materiales de primera calidad para lograr acabados resistentes, prolijos y estéticamente superiores.</p>
 
-	<style>
+        <ul class="hero-bullets">
+          <li><strong>Equipo de pintores capacitados y certificados.</strong></li>
+          <li><strong>Amplia experiencia en interiores, exteriores y altura.</strong></li>
+          <li><strong>Materiales de primera calidad para mayor durabilidad.</strong></li>
+        </ul>
+
+        <div class="hero-cta">
+          <a href="contact.html" class="btn-cta">Solicitar Presupuesto</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+	<style>/* ===== PAINT UP: bajar el contenido del header ===== */
+.breadcumb-area.paint .hero-cleaning{
+  padding-top: 72px;           /* empuja logo + textos hacia abajo */
+}
+
+/* pantallas muy grandes */
+@media (min-width: 1400px){
+  .breadcumb-area.paint .hero-cleaning{ padding-top: 96px; }
+}
+
+/* tablet */
+@media (max-width: 991.98px){
+  .breadcumb-area.paint .hero-cleaning{ padding-top: 40px; }
+}
+
+/* mobile */
+@media (max-width: 575.98px){
+  .breadcumb-area.paint .hero-cleaning{ padding-top: 18px; }
+}
+
 		/*         */
 		.breadcumb-content .breadcumb-logo {
 			display: flex;

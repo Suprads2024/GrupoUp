@@ -71,6 +71,154 @@ Tags: agency, business, consulting, corporate, cyber security, finance, it agenc
   font-style: normal;
 }
 
+/* =======================================================
+   WhatsApp Flotante (v2) — reemplaza el bloque anterior
+   ======================================================= */
+
+.wa-float {
+  position: fixed;
+  right: calc(18px + env(safe-area-inset-right));
+  bottom: calc(18px + env(safe-area-inset-bottom));
+  
+  /* verde Grupo UP */
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  z-index: 9999;
+  transition: transform .15s ease, box-shadow .15s ease, background .2s ease;
+  isolation: isolate;
+  /* separa el pseudo del pulso */
+}
+
+/* Ícono PNG dentro del botón */
+.wa-float img{
+  display:block;
+  width:auto;               /* respeta el tamaño natural del PNG */
+  height:auto;
+  max-width:46px;           /* tope para que no desborde el botón (56x56) */
+  max-height:46px;
+}
+
+
+/* Pulso suave */
+.wa-float::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(29, 174, 90, .35);
+  transform: scale(1);
+  z-index: -1;
+  animation: waPulse 1.8s ease-out infinite;
+}
+
+@keyframes waPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(29, 174, 90, .35);
+  }
+
+  70% {
+    transform: scale(1.28);
+    box-shadow: 0 0 0 14px rgba(29, 174, 90, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(29, 174, 90, 0);
+  }
+}
+
+/* Tooltip */
+.wa-tooltip {
+  position: absolute;
+  right: 70px;
+  /* aparece a la izquierda del botón */
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  background: #0b1220;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, .18);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .15s ease, transform .15s ease;
+}
+
+.wa-tooltip::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background: #0b1220;
+}
+
+.wa-float:hover .wa-tooltip {
+  opacity: 1;
+  transform: translateY(-50%) translateX(-2px);
+}
+
+/* Hover/active */
+.wa-float:hover {
+  transform: translateY(-2px);
+
+ 
+}
+
+.wa-float:active {
+  transform: translateY(0);
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+  .wa-float {
+    width: 54px;
+    height: 54px;
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .wa-float svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .wa-float .wa-tooltip {
+    display: none;
+  }
+
+  /* sin tooltip en mobile */
+}
+
+/* Accesibilidad: reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .wa-float::before {
+    animation: none;
+  }
+
+  .wa-float,
+  .wa-tooltip {
+    transition: none;
+  }
+}
+
+/* No imprimir el botón */
+@media print {
+  .wa-float {
+    display: none !important;
+  }
+}
 
 
 .solutek_nav_manu {
@@ -514,7 +662,7 @@ nav.solutek_menu span {
 }
 
 .service-pill img {
-  width: 68%;
+  width: 70%;
   height: auto;
   display: block;
 }
@@ -547,7 +695,7 @@ nav.solutek_menu span {
 
 .btn-up--solid:hover {
   filter: brightness(0.95);
-    color: #fff;
+  color: #fff;
 }
 
 .btn-up--outline {
@@ -563,10 +711,10 @@ nav.solutek_menu span {
 
 
 /* ===== 2K / 4K ===== */
-@media (min-width: 2000px){
+@media (min-width: 2000px) {
 
   /* Opción A: relleno sólido a los lados */
-  .hero-area{
+  .hero-area {
     /* mantén tu alto y márgenes */
     height: 890px;
     margin: -82px 50px 0;
@@ -577,38 +725,52 @@ nav.solutek_menu span {
     background-position: top center;
     background-size: 1920px auto;
 
-    
+
   }
 
   /* Si querés que el contenido respire un poco más en monitores enormes */
-  .hero-area .container{
-    max-width: 1280px; /* subilo a gusto (1200–1360) */
+  .hero-area .container {
+    max-width: 1280px;
+    /* subilo a gusto (1200–1360) */
   }
 
   /* (opcional) subir levemente tamaños de tipografía */
-  .hero-header h1{ font-size: 56px; line-height: 1.15; }
-  .hero-header p{ font-size: 20px; line-height: 32px; }
+  .hero-header h1 {
+    font-size: 56px;
+    line-height: 1.15;
+  }
+
+  .hero-header p {
+    font-size: 20px;
+    line-height: 32px;
+  }
 
   /* (opcional) agrandar apenas las cards para que no “floten” chicas */
-  .services-strip{ max-width: 820px; gap: 26px; }
-  .service-pill{ height: 160px; }
+  .services-strip {
+    max-width: 820px;
+    gap: 26px;
+  }
+
+  .service-pill {
+    height: 160px;
+  }
 }
 
 /* ===== Opción B: en lugar de color sólido, un degradado que se funda con el fondo ===== */
 /* Usá esta variante en vez de la Opción A si preferís bordes menos duros */
-@media (min-width: 2000px){
-  .hero-area{
+@media (min-width: 2000px) {
+  .hero-area {
     height: 890px;
     margin: -82px 50px 0;
     background-image: url(assets/images/grupoup/headerinicio.png);
-   
+
   }
 }
 
 /* ---- Responsive ---- */
 @media (max-width: 991.98px) {
   .hero-area {
-    padding: 56px 0 36px;
+    padding: 26px 0 36px;
   }
 
   .hero-header {
@@ -618,6 +780,7 @@ nav.solutek_menu span {
   .hero-header p {
     margin-left: auto;
     margin-right: auto;
+    font-size: 14px;
   }
 
   .services-strip {
@@ -627,6 +790,7 @@ nav.solutek_menu span {
     grid-template-columns: repeat(2, minmax(140px, 1fr));
     /* 2x2 como el boceto */
     gap: 22px;
+    margin-bottom: 0px;
   }
 
   .service-pill {
@@ -642,11 +806,13 @@ nav.solutek_menu span {
 @media (max-width: 420px) {
   .services-strip {
     grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
+    gap: 0px;
+    margin-top: -10px;
+    margin-bottom: 10px;
   }
 
   .service-pill {
-    height: 140px;
+    height: 100px;
     border-radius: 24px;
   }
 
@@ -1002,15 +1168,83 @@ h1.section-main-title2 {
 <-- 05.start solutek contact Area Css -->
 =======================================*/
 
+/* Contacto con fondo color, borde redondeado e inset lateral */
 .contact-area {
-  background: url(assets/images/grupoup/gracias.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding: 120px 0 120px;
+  background: transparent;
+  /* sacamos la imagen */
   position: relative;
-  margin-top: -10px;
+  padding: 120px 0;
+  /* alto del bloque */
+  margin-top: 10px;
+  overflow: visible;
 }
+
+/* “Tarjeta” interna que no ocupa todo el ancho */
+.contact-area::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  /* padding lateral (ajustable). Usa clamp para adaptarse */
+  left: clamp(16px, 4vw, 50px);
+  right: clamp(16px, 4vw, 50px);
+
+  background: #182653;
+  border-radius: 32px;
+  pointer-events: none;
+  /* no tapa interacciones */
+  z-index: 0;
+}
+
+/* Traemos el contenido por encima del fondo */
+.contact-area>* {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive: un poco menos de padding y radio en mobile */
+@media (max-width: 767.98px) {
+  .contact-area {
+    padding: 80px 0;
+  }
+
+  .contact-area::before {
+    border-radius: 24px;
+  }
+}
+
+/* (opcional) 2K/4K: mantener el “inset” máximo agradable */
+@media (min-width: 2000px) {
+  .contact-area::before {
+    left: 80px;
+    right: 80px;
+  }
+}
+
+/* Variante A: mapa a la derecha */
+.contact--with-map .contact-map {
+  height: 100%;
+  min-height: 520px;
+  background: #0f1b3f;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, .18);
+}
+
+.contact--with-map .contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 991.98px) {
+  .contact--with-map .contact-map {
+    min-height: 360px;
+    margin-top: 16px;
+  }
+}
+
 
 .contact-area .form_box input {
   border: 1px solid rgba(122, 122, 122, 0.5);
@@ -1058,7 +1292,7 @@ h1.section-main-title2 {
   height: 150px;
   margin-bottom: 22px;
   transition: 0.5s;
-  border-radius: 25px;
+  border-radius: 15px;
   font-size: 16px;
   line-height: 26px;
   color: #7a7a7a;
@@ -1603,7 +1837,7 @@ h4.about-title {
 
 .sservice-area {
   background: #f4f4f4;
-  padding: 120px 0 88px;
+  padding: 60px 0 20px;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -1625,6 +1859,7 @@ h4.about-title {
 /* Fondos específicos */
 .service-cleaning {
   background-image: url('assets/images/grupoup/CLEANING\ UP.png');
+
 }
 
 .service-safe {
@@ -1675,7 +1910,7 @@ h4.about-title {
 
 h3.service-title {
   font-size: 22px;
-  color: #182653;
+  color: #ffffff;
   font-weight: 600;
   font-family: 'LeagueSpartan-Bold';
   margin: 0;
@@ -1689,7 +1924,7 @@ p.service-text {
   margin: 0;
   padding: 11px 0 38px;
   transition: 0.5s;
-  color: #182653;
+  color: #ffffff;
 }
 
 .service-btn a {
@@ -1697,7 +1932,7 @@ p.service-text {
   display: inline-block;
   font-size: 15px;
   line-height: 26px;
-  color: #182653;
+  color: #ffffff;
   font-weight: 600;
   text-decoration: none;
 }
@@ -1754,6 +1989,153 @@ p.service-text {
 
   .service-content {
     text-align: center;
+  }
+}
+
+/* ===== Hero Cleaning: tipografías y contraste en blanco ===== */
+
+/* Overlay para mejorar legibilidad sobre la foto (opcional pero recomendado) */
+.breadcumb-area.cleaning {
+  position: relative;
+  padding: clamp(32px, 5vw, 56px) 0;
+}
+
+.breadcumb-area.cleaning::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+.breadcumb-area.cleaning .container,
+.breadcumb-area.cleaning .hero-cleaning {
+  position: relative;
+  z-index: 1;
+}
+
+/* Tipografías */
+.hero-copy h1 {
+  font-family: 'LeagueSpartan-Bold';
+  color: #fff;
+  font-size: 55px;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, .35);
+  width: 60%;
+  margin-top: 20px;
+}
+
+.hero-copy p {
+  font-family: 'LeagueSpartan-Regular';
+  color: rgba(255, 255, 255, .86);
+  width: 50%;
+  font-size: 20px;
+}
+
+.hero-bullets li {
+  font-family: 'LeagueSpartan-Medium';
+  color: #fff;
+  font-size: 20px;
+  /* bullets y texto en blanco */
+}
+
+.hero-bullets li::marker {
+  color: rgba(255, 255, 255, .8);
+}
+
+/* CTA y chip (se mantienen legibles sobre la foto) */
+.btn-cta {
+  margin-top: 20px;
+  background: #1DAE5A;
+  color: #fff;
+}
+
+.btn-cta:hover {
+  background: #159a4f;
+}
+
+.hero-chip {
+  background: rgba(255, 255, 255, .96);
+  color: #0f2034;
+  border-color: rgba(16, 32, 52, .12);
+}
+
+/* Logo (ya usás versión blanca, no aplicar filtros) */
+.hero-brand img {
+  width: clamp(120px, 18vw, 180px);
+  height: auto;
+  display: block;
+  margin-left: -10px;
+}
+
+/* Ocultar breadcrumb clásico en esta landing */
+.breadcumb-area.cleaning .breadcumb-list {
+  display: none;
+}
+
+
+/* CTA + chip */
+.hero-cta {
+
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  background: #1DAE5A;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-family: 'LeagueSpartan-Bold';
+  letter-spacing: .2px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, .10);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+.btn-cta:hover {
+
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, .14);
+  background: #159a4f;
+  color: white;
+}
+
+.hero-chip {
+  font-family: 'LeagueSpartan-Bold';
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+
+  color: #10324d;
+  background: #eef1f4;
+  border: 1px solid #e1e6ea;
+  margin-left: 10px;
+  padding: 12px 22px;
+  border-radius: 999px;
+}
+
+.hero-chip img {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+/* Ocultar breadcrumb viejo en esta landing (si existiera) */
+.breadcumb-area.cleaning .breadcumb-list {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 575px) {
+  .hero-chip {
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -1914,56 +2296,22 @@ h3.project-title a:hover {
 <--  start solutek brand Area Css -->
 =======================================*/
 
-/* ===== Brand bar base ===== */
-.brand-area{
-  background:#182653;
-  padding:31px 0;
-  margin: -150px 49px 0;         /* desktop normal */
-  border-radius: 0 0 50px 50px;
-  position: relative;
-  z-index: 5;
-  overflow: hidden;               /* evita “tiras” blancas por overflow interno */
+.brand-area {
+  background: #182653;
+  padding: 31px 0;
+  margin: -150px 49px 0;
+  left: 0;
+  right: 0;
+  border-radius: 0px 0px 50px 50px;
 }
 
-/* Título arriba a la izquierda */
-.brand-heading{
-  margin: 0 0 14px;
-  margin-left: 130px;
- font-family: 'LeagueSpartan-Bold';
-  font-size: 28px;
-  letter-spacing: .6px;
-
-  color: #c9d4ff;                 /* podés usar #fff si preferís más contraste */
+.brand-box {
+  text-align: center;
 }
 
-/* Evitá que Owl expanda el ancho */
-.brand-area .container{ max-width: 100%; }
-.brand_list{ width:100% !important; }
-
-/* ===== Mobile: ocupar 100% del ancho (sin márgenes laterales) ===== */
-@media (max-width: 767.98px){
-  .brand-area{
-    margin: -120px 0 0;          /* quita los 49px laterales */
-    width: 100%;
-    border-radius: 0 0 30px 30px;
-  }
-  .brand-area .container{
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+.owl-carousel .owl-item img {
+  display: inline;
 }
-
-/* ===== 2K / 4K: “congelado” como 1920 ===== */
-@media (min-width: 2000px){
-  .brand-area{
-    margin: -150px auto 0;       /* centrada */
-    width: 1822px;               /* 1920 - 49 - 49 = 1822 */
-  }
-}
-
-/* (opcional pero recomendado por si otro bloque genera scroll horizontal) */
-html, body{ overflow-x: hidden; }
-
 
 /*=====================================
 <--  end solutek brand Area Css -->
@@ -4293,7 +4641,7 @@ ul.list-style-one li a:hover {
 }
 
 .obj-logos {
-  height: 68px;
+  height: 88px;
   width: auto;
   display: block;
 }
@@ -6429,51 +6777,75 @@ ul.list-style-one li a:hover {
 /* <!-- ARRANCA SAFE -- */
 /* <!--==================================================--> */
 .breadcumb-area.cleaning {
-  background: url(assets/images/grupoup/cleaningup/adsasd.png);
+  background: url(assets/images/grupoup/cleaningup/2.png);
   background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
-  margin: -10px 0px 0 0px;
-  padding: 230px 0 170px;
+  background-position: center;
+
+  height: 90vh;
+  width: 100%;
+
+
 }
 
 /* Safe Up */
 .breadcumb-area.safe {
-  background: url(assets/images/grupoup/safeup/safeup1.jpg);
+  background: url(assets/images/grupoup/safeup/4.png);
   background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
-  margin: -10px 0px 0 0px;
-  padding: 230px 0 170px;
+  background-position: center;
+
+  height: 90vh;
+  width: 100%;
 }
 
 /* Paint Up */
 .breadcumb-area.paint {
-  background: url(assets/images/grupoup/paintup/paintup.jpg);
+  background: url(assets/images/grupoup/paintup/6.png);
   background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
-  margin: -10px 0px 0 0px;
-  padding: 230px 0 170px;
+  background-position: center;
+
+  height: 90vh;
+  width: 100%;
 }
 
 /* Tu Derecho */
 .breadcumb-area.law {
-  background: url(assets/images/grupoup/tuderecho/headertuderecho.png);
+  background: url(assets/images/grupoup/tuderecho/6.png);
   background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
-  margin: -10px 0px 0 0px;
-  padding: 230px 0 170px;
+  background-position: center;
+
+  height: 90vh;
+  width: 100%;
 }
 
+@media (min-width:2000px) {
+  .breadcumb-area.cleaning {
+
+    background-size: cover;
+  }
+
+  /* Safe Up */
+  .breadcumb-area.safe {
+    background-size: cover;
+  }
+
+  /* Paint Up */
+  .breadcumb-area.paint {
+    background-size: cover;
+  }
+
+  /* Tu Derecho */
+  .breadcumb-area.law {
+    background-size: cover;
+  }
+
+}
 
 .breadcumb-area.about {
   padding: 230px 0 180px;
 }
 
 .breadcumb-content {
-  margin-top: -100px;
+  margin-top: 100px;
   text-align: center;
 }
 

@@ -3601,6 +3601,9 @@ h3.blog-details-title.two {
 
  .breadcumb-area.law{
     background: url(../images/grupoup/tuderecho/6.jpg);
+        background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
   
  }
 
@@ -3609,6 +3612,14 @@ h3.blog-details-title.two {
  }
 }
 @media (max-width:786px){
+
+    /* Título + párrafo (desktop izquierda, mobile centrado) */
+.hero-header h1 {
+  font-family: 'LeagueSpartan-Bold';
+  line-height: 1.15;
+  margin: 0 0 16px;
+font-size: 26px; }
+  
     .project-area.style-three{
         padding: 60px 0 60px;
         
@@ -3619,7 +3630,131 @@ h3.blog-details-title.two {
   line-height: 20px;
 }
 
+.contact-area .form_box input{
+    height: 40px;
 }
+
+.contact-area .form_box select{
+    height: 40px;
+}
+
+.form_box textarea{
+    height: 60px;
+}
+ .quote_button{
+    display: flex;
+    justify-content: center;   /* centra horizontal */
+    width: 100%;
+  }
+  .quote_button button{
+    display: inline-flex;       /* por las dudas */
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;             /* fallback si deja de ser flex */
+  }
+
+
+
+
+}
+
+
+/* ====== Desktop: más espacio entre textos ====== */
+@media (min-width: 992px){
+  .hero-copy h1{
+    margin-bottom: 28px;      /* + aire bajo el título */
+    line-height: 1.12;
+  }
+  .hero-copy p{
+    margin: 18px 0 20px;      /* separa párrafo de título y bullets */
+    line-height: 1.7;
+  }
+  .hero-bullets{
+    margin: 16px 0 22px;      /* aire extra antes del CTA */
+  }
+  .hero-bullets li{
+    margin: 8px 0;            /* espacio entre ítems */
+  }
+  .hero-cta{
+    margin-top: 18px;
+    gap: 20px;                /* separa botón y chip */
+  }
+}
+
+/* ====== Mobile: centrar todo y ajustar tamaños ====== */
+@media (max-width: 767.98px){
+  .hero-brand img{
+    margin: 0 auto 12px;      /* logo centrado */
+  }
+  .hero-copy{ text-align: center; }
+
+  .hero-copy h1{
+    width: 100%;              /* quita el 60% en mobile */
+    font-size: 28px;          /* baja un poco para caber */
+    margin: 0 0 14px;
+line-height: 32px;
+  }
+  .hero-copy p{
+    width: 100%;              /* quita el 50% en mobile */
+    font-size: 16px;
+    margin: 10px auto 14px;
+   
+  }
+
+  .hero-bullets{
+    list-style-position: inside;
+    padding: 0;
+    margin: 10px 0 16px;
+  }
+  .hero-bullets li{
+    font-size: 16px;
+    margin: 6px 0;
+  }
+
+  .hero-cta{
+    justify-content: center;  /* centra botón + chip */
+    gap: 12px;
+  }
+  .btn-cta{
+    width: 100%;
+    max-width: 280px;         /* botón centrado y cómodo */
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .hero-chip{
+    width: 100%;
+    justify-content: center;
+    margin-left: 0px;
+  }
+}
+/* ===== SAFE UP: bajar el contenido del header ===== */
+.breadcumb-area.safe .hero-cleaning{
+  padding-top: 72px;           /* empuja todo (logo + textos) hacia abajo */
+}
+
+/* pantallas muy grandes: un poco más */
+@media (min-width: 1400px){
+  .breadcumb-area.safe .hero-cleaning{ padding-top: 96px; }
+}
+
+/* tablet */
+@media (max-width: 991.98px){
+  .breadcumb-area.safe .hero-cleaning{ padding-top: 40px; }
+}
+
+/* mobile */
+@media (max-width: 575.98px){
+  .breadcumb-area.safe .hero-cleaning{ padding-top: 18px; }
+}
+
+@media (max-width: 375px){
+   .hero-copy h1{
+
+    font-size: 24px;          /* baja un poco para caber */
+    
+  }
+}
+
 /* small mobile :320px. */
 @media only screen and (min-width: 320px) and (max-width: 479px) {
 /* solutek home page one */
@@ -3647,9 +3782,15 @@ h3.blog-details-title.two {
 
 /* hero area */
 .hero-area {
-    height: 75vh;
+    height: 100vh;
     margin: 0;
     margin-bottom: -10px;
+}
+
+.service-pill img {
+  width: 50%;
+  height: auto;
+  display: block;
 }
 
 .hero-contant h5 {
@@ -4267,6 +4408,7 @@ margin: 50px 10px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    height: 100vh;
 }
 
 

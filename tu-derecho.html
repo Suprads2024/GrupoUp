@@ -42,6 +42,14 @@
 </head>
 
 <body>
+<!-- WhatsApp flotante -->
+<a class="wa-float"
+   href="https://wa.me/5493412421456?text=Hola%20Grupo%20UP!%20Quisiera%20un%20presupuesto."
+   target="_blank" rel="noopener"
+   aria-label="Escribinos por WhatsApp">
+  <img src="assets/images/whatsapp.png" alt="" />
+  <span class="wa-tooltip">Chateá con nosotros</span>
+</a>
 
 
 	<!--==================================================-->
@@ -114,29 +122,59 @@
 	<!-- Start solutek breadcumb Area -->
 	<!--==================================================-->
 	<div class="breadcumb-area law">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="breadcumb-content">
+  <div class="container">
+    <div class="hero-cleaning">
 
-						<!-- Logo paint up -->
-						<div class="breadcumb-logo">
-							<img src="assets/images/grupoup/tuderecho/7.png" alt="paint up">
-						</div>
+      <!-- Logo Tu Derecho -->
+      <div class="hero-brand">
+        <img src="assets/images/grupoup/tuderecho/7.png" alt="Tu Derecho">
+      </div>
 
-						<ul class="breadcumb-list">
-							<li><a href="index.html">Inicio</a></li>
-							<li class="list-arrow">&lt;</li>
-							<li style="color: #8A181A;">TU DERECHO</li>
-						</ul>
+      <div class="hero-copy">
+        <h1>Asesoramiento y representación legal</h1>
 
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <p>Un estudio jurídico que combina profesionalismo, ética y cercanía para ofrecer soluciones claras y efectivas en cada caso.</p>
+
+        <ul class="hero-bullets">
+          <li><strong>Abogados especializados en diversas áreas del derecho.</strong></li>
+          <li><strong>Atención personalizada y total confidencialidad.</strong></li>
+          <li><strong>Compromiso real con cada cliente.</strong></li>
+        </ul>
+
+        <div class="hero-cta">
+          <a href="contact.html" class="btn-cta">Solicitar Presupuesto</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 
 	<style>
+		/* ===== TU DERECHO (law): bajar el contenido del header ===== */
+.breadcumb-area.law .hero-cleaning{
+  padding-top: 72px;              /* empuja logo + textos hacia abajo */
+}
+
+/* pantallas muy grandes */
+@media (min-width: 1400px){
+  .breadcumb-area.law .hero-cleaning{ padding-top: 96px; }
+}
+
+/* tablet */
+@media (max-width: 991.98px){
+  .breadcumb-area.law .hero-cleaning{ padding-top: 40px; }
+}
+
+/* mobile */
+@media (max-width: 575.98px){
+  .breadcumb-area.law .hero-cleaning{ padding-top: 60px; }
+}
+
+/* (opcional) ocultar el breadcrumb clásico en esta landing */
+.breadcumb-area.law .breadcumb-list{ display: none; }
+
 		/*         */
 		.breadcumb-content .breadcumb-logo {
 			display: flex;
@@ -184,66 +222,6 @@
 	<!--==================================================-->
 	<!-- start Cleaning Up / About Area (reemplazo de contenido) -->
 	<!--==================================================-->
-	<div class="about-area style-two">
-		<div class="container">
-			<div class="row align-items-center">
-
-				<!-- Imagen, no tocar -->
-				<div class="col-lg-6">
-					<div class="about-thumbail">
-						<div class="about-thumb">
-							<img src="assets/images/grupoup/tuderecho/secciontuderecho.png"
-								alt="Tu Derecho - Estudio Jurídico">
-						</div>
-						<div class="about-shape">
-							<img src="assets/images/grupoup/cleaningup/fondogrupo.png" alt="shape">
-						</div>
-					</div>
-				</div>
-
-				<!-- Contenido Tu Derecho -->
-				<div class="col-lg-6">
-					<div class="about-section-content">
-						<div class="section-title text-left">
-							<h5 class="section-sub-title" style="color: #B32023;">Tu Derecho · Grupo UP</h5>
-							<h1 class="section-main-title">Asesoramiento y representación legal</h1>
-
-							<p class="section-title-descr">
-								Un estudio jurídico que combina profesionalismo, ética y cercanía para ofrecer
-								soluciones
-								claras y efectivas en cada caso.
-							</p>
-						</div>
-
-						<div class="about-list-item">
-							<ul>
-								<li>
-									<img src="assets/images/grupoup/cleaningup/comprobado.png" alt=""
-										style="width:16px;height:16px;margin-right:8px;vertical-align:-3px;">
-									Abogados especializados en diversas áreas del derecho
-								</li>
-								<li>
-									<img src="assets/images/grupoup/cleaningup/comprobado.png" alt=""
-										style="width:16px;height:16px;margin-right:8px;vertical-align:-3px;">
-									Atención personalizada y total confidencialidad
-								</li>
-								<li>
-									<img src="assets/images/grupoup/cleaningup/comprobado.png" alt=""
-										style="width:16px;height:16px;margin-right:8px;vertical-align:-3px;">
-									Compromiso real con cada cliente
-								</li>
-							</ul>
-						</div>
-
-						<div class="solutek-btn">
-							<a href="#contacto-tuderecho" class="btn-2" style="background: #8A181A;">CONSULTA LEGAL</a>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
 
 	<section class="practice-areas" id="areas">
 		<div class="container">
@@ -255,7 +233,7 @@
 				</div>
 				<div class="col-auto">
 					<!-- Reemplazá la ruta por tu logo / íconos -->
-					<img src="assets/images/grupoup/tuderecho/6.png" alt="Iconos de servicio" class="obj-logos">
+					<img src="assets/images/grupoup/tuderecho/Logo - Tu Derecho PNG.png" alt="Iconos de servicio" class="obj-logos">
 				</div>
 			</div>
 			<div class="areas-list">
