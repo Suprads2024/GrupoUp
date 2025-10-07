@@ -233,7 +233,7 @@ color: #1DAE5A!important;
 }
 
 
-@media (max-width:580px){
+@media (max-width:940px){
 
   .mean-container .mean-bar::before {
   content: "";
