@@ -41,6 +41,25 @@
 </head>
 
 <body>
+
+  <script>
+document.addEventListener('click', function (e) {
+  const bar = e.target.closest('.mean-bar');
+  if (!bar) return;
+
+  // área donde MeanMenu dibuja el ::before (ajusta si querés)
+  const r = bar.getBoundingClientRect();
+  const tapX = e.clientX, tapY = e.clientY;
+  const hit = tapX < (r.left + 180) && tapY < (r.top + 180) && tapY > r.top;
+
+  // si no tocaste el botón hamburguesa y fue en esa zona: al index
+  const burger = bar.querySelector('.meanmenu-reveal');
+  if (hit && (!burger || !burger.contains(e.target))) {
+    window.location.href = 'index.html';
+  }
+}, true);
+</script>
+
 <!-- WhatsApp flotante -->
 <a class="wa-float"
    href="https://wa.me/5493412421456?text=Hola%20Grupo%20UP!%20Quisiera%20un%20presupuesto."
@@ -349,7 +368,7 @@
         <!-- Imagen / thumb -->
         <div class="col-lg-6 wow fadeInLeft" data-wow-delay=".2s">
           <div class="about-thumb">
-            <img src="assets/images/about-thumb.png" alt="about-thumb" class="wow zoomIn" data-wow-delay=".4s">
+            <img src="assets/images/grupoup/636x560.png" alt="about-thumb" class="wow zoomIn" data-wow-delay=".4s">
 
             <h4 class="about-title wow fadeInDown" data-wow-delay=".8s">
             </h4>
@@ -555,7 +574,7 @@
             <h1 class="section-main-title">Frecuentes <span>(FAQ)</span></h1>
           </div>
           <div class="faq-thumb wow zoomIn" data-wow-delay=".4s">
-            <img src="assets/images/faq1.png" alt="faq1">
+            <img src="assets/images/grupoup/faq.png" alt="faq1">
           </div>
         </div>
         <div class="col-lg-6 col-md-12">
@@ -602,7 +621,7 @@
         <img src="assets/images/faq2.png" alt="faq2">
       </div>
       <div class="faq-shape2 wow fadeInUp" data-wow-delay="2s">
-        <img src="assets/images/faq3.png" alt="faq2">
+        <img src="assets/images/grupoup/linea.png" alt="faq2">
       </div>
     </div>
   </div>

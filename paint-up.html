@@ -42,6 +42,25 @@
 </head>
 
 <body>
+
+	  <script>
+document.addEventListener('click', function (e) {
+  const bar = e.target.closest('.mean-bar');
+  if (!bar) return;
+
+  // área donde MeanMenu dibuja el ::before (ajusta si querés)
+  const r = bar.getBoundingClientRect();
+  const tapX = e.clientX, tapY = e.clientY;
+  const hit = tapX < (r.left + 180) && tapY < (r.top + 180) && tapY > r.top;
+
+  // si no tocaste el botón hamburguesa y fue en esa zona: al index
+  const burger = bar.querySelector('.meanmenu-reveal');
+  if (hit && (!burger || !burger.contains(e.target))) {
+    window.location.href = 'index.html';
+  }
+}, true);
+</script>
+
 <!-- WhatsApp flotante -->
 <a class="wa-float"
    href="https://wa.me/5493412421456?text=Hola%20Grupo%20UP!%20Quisiera%20un%20presupuesto."
@@ -245,8 +264,8 @@
 				<div class="about-section-content">
 					<div class="section-title text-left">
 						<h5 class="section-sub-title">Paint Up · Grupo UP</h5>
-						<h1 class="section-main-title">Especialistas en pintura</h1>
-						<h1 class="section-main-title">profesional y duradera</h1>
+						<h1 class="section-main-title">sobre paint up</h1>
+						
 						<p class="section-title-descr">
 							En Paint Up ofrecemos servicios de pintura profesional para edificios, consorcios, empresas y hogares. 
 							Trabajamos con técnicas seguras y materiales de primera calidad para lograr resultados prolijos y estéticos.
@@ -290,7 +309,7 @@
 			<div class="col-lg-7">
 				<div class="section-title text-left">
 					<h5 class="section-sub-title" style="color: white;">Paint Up · Grupo UP</h5>
-					<h1 class="section-main-title" style="color: white;">Nuestro servicio incluye</h1>
+					<h1 class="section-main-title" style="color: white;">ÁREAS DE ESPECIALIZACIÓN</h1>
 				</div>
 			</div>
 			<div class="col-lg-5">
@@ -386,7 +405,7 @@
 		<div class="container">
 			<div class="row justify-content-between align-items-center objetivos-head">
 				<div class="col">
-					<h2 class="solutions-title">COMO TRABAJAMOS</h2>
+					<h2 class="solutions-title">PROCESOS QUE GARANTIZAN CALIDAD Y SEGURIDAD</h2>
 				</div>
 				<div class="col-auto">
 					<!-- Reemplazá la ruta por tu logo / íconos -->

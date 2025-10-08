@@ -40,6 +40,25 @@
 		
 	</head>
 <body>
+
+	  <script>
+document.addEventListener('click', function (e) {
+  const bar = e.target.closest('.mean-bar');
+  if (!bar) return;
+
+  // área donde MeanMenu dibuja el ::before (ajusta si querés)
+  const r = bar.getBoundingClientRect();
+  const tapX = e.clientX, tapY = e.clientY;
+  const hit = tapX < (r.left + 180) && tapY < (r.top + 180) && tapY > r.top;
+
+  // si no tocaste el botón hamburguesa y fue en esa zona: al index
+  const burger = bar.querySelector('.meanmenu-reveal');
+  if (hit && (!burger || !burger.contains(e.target))) {
+    window.location.href = 'index.html';
+  }
+}, true);
+</script>
+
 	<!-- WhatsApp flotante -->
 <a class="wa-float"
    href="https://wa.me/5493412421456?text=Hola%20Grupo%20UP!%20Quisiera%20un%20presupuesto."

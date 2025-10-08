@@ -3725,6 +3725,8 @@ line-height: 32px;
     width: 100%;
     justify-content: center;
     margin-left: 0px;
+    font-size: 10px;
+    padding: 12px 18px;
   }
 }
 /* ===== SAFE UP: bajar el contenido del header ===== */
@@ -4721,6 +4723,7 @@ h3.blog-details-title.two {
 }
 	
 }
+
 
 
 

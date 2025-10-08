@@ -79,7 +79,7 @@ Tags: agency, business, consulting, corporate, cyber security, finance, it agenc
   position: fixed;
   right: calc(18px + env(safe-area-inset-right));
   bottom: calc(18px + env(safe-area-inset-bottom));
-  
+
   /* verde Grupo UP */
   color: #fff;
   display: inline-flex;
@@ -94,12 +94,14 @@ Tags: agency, business, consulting, corporate, cyber security, finance, it agenc
 }
 
 /* Ícono PNG dentro del botón */
-.wa-float img{
-  display:block;
-  width:auto;               /* respeta el tamaño natural del PNG */
-  height:auto;
-  max-width:46px;           /* tope para que no desborde el botón (56x56) */
-  max-height:46px;
+.wa-float img {
+  display: block;
+  width: auto;
+  /* respeta el tamaño natural del PNG */
+  height: auto;
+  max-width: 46px;
+  /* tope para que no desborde el botón (56x56) */
+  max-height: 46px;
 }
 
 
@@ -173,7 +175,7 @@ Tags: agency, business, consulting, corporate, cyber security, finance, it agenc
 .wa-float:hover {
   transform: translateY(-2px);
 
- 
+
 }
 
 .wa-float:active {
@@ -2091,7 +2093,7 @@ p.service-text {
   color: #fff;
   text-decoration: none;
   border-radius: 999px;
-  font-family: 'LeagueSpartan-Bold';
+  font-family: 'LeagueSpartan-Medium';
   letter-spacing: .2px;
   box-shadow: 0 10px 22px rgba(0, 0, 0, .10);
   transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
@@ -2104,22 +2106,29 @@ p.service-text {
   background: #159a4f;
   color: white;
 }
-
-.hero-chip {
+.hero-chip{
+  /* lo que ya tenés… */
   font-family: 'LeagueSpartan-Bold';
   display: inline-flex;
   align-items: center;
   gap: 8px;
   font-size: 12px;
-
   color: #10324d;
   background: #eef1f4;
   border: 1px solid #e1e6ea;
   margin-left: 10px;
   padding: 12px 22px;
   border-radius: 999px;
+
+  /* ↓↓↓ nudge vertical */
+  position: relative;
+  top: 4px;          /* probá 2–6px según tu ojo */
 }
 
+/* opcional: en mobile lo dejamos centrado de nuevo */
+@media (max-width: 575.98px){
+  .hero-chip{ top: 0; }
+}
 .hero-chip img {
   width: 14px;
   height: 14px;
@@ -6772,6 +6781,131 @@ ul.list-style-one li a:hover {
   padding: 0 0 30px;
 }
 
+/* ====== Servicios Minimal (compacto y marketinero) ====== */
+.services-min {
+  padding: 0px 0px 80px;
+  background: #fff;
+  /* o transparente si tu layout ya define fondo */
+}
+
+/* Head compacto */
+.services-min__head {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.services-min__eyebrow {
+  margin: 0 0 6px;
+  font-family: 'LeagueSpartan-Bold';
+  color: #1DAE5A;
+  letter-spacing: .2px;
+}
+
+.services-min__title {
+  margin: 0;
+ font-family: 'LeagueSpartan-Bold';
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.12;
+  color: #0b1220;
+}
+
+.services-min__kicker {
+    font-family: 'LeagueSpartan-medium';
+  margin: 8px auto 0;
+  color: #5b6572;
+  font-size: 15px;
+}
+
+/* Grid denso */
+.features-grid {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Card mínima */
+.feature {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, .08);
+  border-radius: 14px;
+  padding: 12px 12px;
+  transition: box-shadow .2s ease, transform .2s ease, border-color .2s ease;
+}
+
+.feature:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, .08);
+  border-color: rgba(29, 174, 90, .25);
+}
+
+/* Ícono más grande en desktop/tablet */
+.feature__icon{
+  width: 40px;          /* antes 32px */
+  height: 40px;         /* antes 32px */
+  flex: 0 0 40px;       /* mantené el mismo tamaño en el layout */
+  object-fit: contain;
+  margin-top: 2px;
+}
+
+/* Tipos compactos */
+.feature__title {
+  margin: 0 0 4px;
+ font-family: 'LeagueSpartan-Bold';
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b1220;
+}
+
+.feature__desc {
+  font-family: 'LeagueSpartan-medium';
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #5b6572;
+}
+
+/* ====== Responsivo ====== */
+@media (max-width: 1199.98px) {
+  .features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .services-min__head {
+    margin-bottom: 16px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .feature {
+    padding: 12px;
+  }
+
+   .feature__icon{
+    width: 34px;        /* antes 28px */
+    height: 34px;
+    flex-basis: 34px;
+  }
+
+  .feature__title {
+    font-size: 15px;
+  }
+
+  .feature__desc {
+    font-size: 13.5px;
+  }
+}
 
 /* <!--==================================================-- */
 /* <!-- ARRANCA SAFE -- */
@@ -10236,3 +10370,5 @@ p.blog-details-desc.three {
   top: -100%;
   opacity: 0;
 }
+
+

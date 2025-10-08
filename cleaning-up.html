@@ -42,6 +42,25 @@
 </head>
 
 <body>
+
+	  <script>
+document.addEventListener('click', function (e) {
+  const bar = e.target.closest('.mean-bar');
+  if (!bar) return;
+
+  // área donde MeanMenu dibuja el ::before (ajusta si querés)
+  const r = bar.getBoundingClientRect();
+  const tapX = e.clientX, tapY = e.clientY;
+  const hit = tapX < (r.left + 180) && tapY < (r.top + 180) && tapY > r.top;
+
+  // si no tocaste el botón hamburguesa y fue en esa zona: al index
+  const burger = bar.querySelector('.meanmenu-reveal');
+  if (hit && (!burger || !burger.contains(e.target))) {
+    window.location.href = 'index.html';
+  }
+}, true);
+</script>
+
 <!-- WhatsApp flotante -->
 <a class="wa-float"
    href="https://wa.me/5493412421456?text=Hola%20Grupo%20UP!%20Quisiera%20un%20presupuesto."
@@ -250,167 +269,91 @@
 	<!-- start Cleaning Up / Servicios (Soluciones en limpieza) -->
 	<!--==================================================-->
 
-	<div class="service-area style-two services-compact" id="servicios-cleaning">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="section-title text-center">
-						<h5 class="section-sub-title">Cleaning Up · Grupo UP</h5>
-						<h1 class="section-main-title">Soluciones en limpieza</h1>
-						<h1 class="section-main-title">para empresas, consorcios y hogares</h1>
-					</div>
-				</div>
-			</div>
+<section class="services-min" id="servicios-cleaning">
+  <div class="container">
+    <header class="services-min__head">
+      <h5 class="services-min__eyebrow">Cleaning Up · Grupo UP</h5>
+      <h2 class="services-min__title">Soluciones en limpieza</h2>
+      <p class="services-min__kicker">Resultados visibles desde el primer día.</p>
+    </header>
 
-			<div class="row">
+    <ul class="features-grid">
+      <!-- 1 -->
+      <li class="feature">
+        <img class="feature__icon" src="assets/images/grupoup/cleaningup/industrial.png" alt="">
+        <div class="feature__body">
+          <h3 class="feature__title">Industrial sin frenar tu operación</h3>
+          <p class="feature__desc">Procesos seguros y maquinaria profesional fuera de hora.</p>
+        </div>
+      </li>
+      <!-- 2 -->
+      <li class="feature">
+        <img class="feature__icon" src="assets/images/grupoup/cleaningup/edificios.png" alt="">
+        <div class="feature__body">
+          <h3 class="feature__title">Oficinas e instituciones listas</h3>
+          <p class="feature__desc">Planes por tránsito y horarios, sin interrumpir la atención.</p>
+        </div>
+      </li>
+      <!-- 3 -->
+      <li class="feature">
+        <img class="feature__icon" src="assets/images/grupoup/cleaningup/vivienda-social.png" alt="">
+        <div class="feature__body">
+          <h3 class="feature__title">Consorcios y viviendas impecables</h3>
+          <p class="feature__desc">Áreas comunes y unidades con trato cordial y confiable.</p>
+        </div>
+      </li>
+      <!-- 4 -->
+      <li class="feature">
+        <img class="feature__icon" src="assets/images/grupoup/cleaningup/mantenimiento.png" alt="">
+        <div class="feature__body">
+          <h3 class="feature__title">Finales de obra a tiempo</h3>
+          <p class="feature__desc">Polvo y residuos a cero para entregar sin demoras.</p>
+        </div>
+      </li>
+      <!-- 5 -->
+      <li class="feature">
+        <img class="feature__icon" src="assets/images/grupoup/cleaningup/clinica.png" alt="">
+        <div class="feature__body">
+          <h3 class="feature__title">Clínicas y hospitales seguros</h3>
+          <p class="feature__desc">Protocolos sanitarios y productos certificados.</p>
+        </div>
+      </li>
+      <!-- 6 -->
+      <li class="feature">
+        <img class="feature__icon" src="assets/images/grupoup/cleaningup/calendario.png" alt="">
+        <div class="feature__body">
+          <h3 class="feature__title">Eventos sin preocupaciones</h3>
+          <p class="feature__desc">Antes, durante y después: equipo dedicado en sitio.</p>
+        </div>
+      </li>
+      <!-- 7 -->
+      <li class="feature">
+        <img class="feature__icon" src="assets/images/grupoup/cleaningup/jardineria.png" alt="">
+        <div class="feature__body">
+          <h3 class="feature__title">Verdes prolijos todo el año</h3>
+          <p class="feature__desc">Corte, poda y riego con calendario de temporada.</p>
+        </div>
+      </li>
+      <!-- 8 -->
+      <li class="feature">
+        <img class="feature__icon" src="assets/images/grupoup/cleaningup/lavadora-a-presion.png" alt="">
+        <div class="feature__body">
+          <h3 class="feature__title">Fachadas como nuevas</h3>
+          <p class="feature__desc">Hidrolavado de alto impacto sin dañar superficies.</p>
+        </div>
+      </li>
+      <!-- 9 -->
+      <li class="feature">
+        <img class="feature__icon" src="assets/images/grupoup/cleaningup/piscina.png" alt="">
+        <div class="feature__body">
+          <h3 class="feature__title">Piletas cristalinas</h3>
+          <p class="feature__desc">Control químico y mantenimiento periódico todo el año.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
 
-				<!-- 1 -->
-				<div class="col-lg-4 col-md-6">
-					<div class="single-service-box">
-						<div class="service-box-inner">
-							<div class="service-content">
-								<h4 class="service-title">Limpieza industrial</h4>
-								<p class="service-des">Fábricas y depósitos con procesos seguros y máquinas
-									profesionales.</p>
-							</div>
-							<div class="service-icon">
-								<img src="assets/images/grupoup/cleaningup/industrial.png" alt="icon">
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 2 -->
-				<div class="col-lg-4 col-md-6">
-					<div class="single-service-box">
-						<div class="service-box-inner">
-							<div class="service-content">
-								<h4 class="service-title">Entidades públicas y privadas</h4>
-								<p class="service-des">Planes a medida para oficinas, instituciones y espacios de alto
-									tránsito.</p>
-							</div>
-							<div class="service-icon">
-								<img src="assets/images/grupoup/cleaningup/edificios.png" alt="icon">
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 3 -->
-				<div class="col-lg-4 col-md-6">
-					<div class="single-service-box">
-						<div class="service-box-inner">
-							<div class="service-content">
-								<h4 class="service-title">Consorcios y viviendas</h4>
-								<p class="service-des">Limpieza integral de edificios, áreas comunes y unidades
-									privadas.</p>
-							</div>
-							<div class="service-icon">
-								<img src="assets/images/grupoup/cleaningup/vivienda-social.png" alt="icon">
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 4 -->
-				<div class="col-lg-4 col-md-6">
-					<div class="single-service-box">
-						<div class="service-box-inner">
-							<div class="service-content">
-								<h4 class="service-title">Finales de obra</h4>
-								<p class="service-des">Remoción de polvo, restos de material y puesta a punto para
-									entrega.</p>
-							</div>
-							<div class="service-icon">
-								<img src="assets/images/grupoup/cleaningup/mantenimiento.png" alt="icon">
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 5 -->
-				<div class="col-lg-4 col-md-6">
-					<div class="single-service-box">
-						<div class="service-box-inner">
-							<div class="service-content">
-								<h4 class="service-title">Clínicas y hospitales</h4>
-								<p class="service-des">Protocolos específicos y productos certificados para áreas
-									sensibles.</p>
-							</div>
-							<div class="service-icon">
-								<img src="assets/images/grupoup/cleaningup/clinica.png" alt="icon">
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 6 -->
-				<div class="col-lg-4 col-md-6">
-					<div class="single-service-box">
-						<div class="service-box-inner">
-							<div class="service-content">
-								<h4 class="service-title">Eventos</h4>
-								<p class="service-des">Antes, durante y después: equipos dedicados para mantener todo
-									impecable.</p>
-							</div>
-							<div class="service-icon">
-								<img src="assets/images/grupoup/cleaningup/calendario.png" alt="icon">
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 7 -->
-				<div class="col-lg-4 col-md-6">
-					<div class="single-service-box">
-						<div class="service-box-inner">
-							<div class="service-content">
-								<h4 class="service-title">Jardinería</h4>
-								<p class="service-des">Corte, poda, riego y mantenimiento de espacios verdes y
-									parquización.</p>
-							</div>
-							<div class="service-icon">
-								<img src="assets/images/grupoup/cleaningup/jardineria.png" alt="icon">
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 8 -->
-				<div class="col-lg-4 col-md-6">
-					<div class="single-service-box">
-						<div class="service-box-inner">
-							<div class="service-content">
-								<h4 class="service-title">Hidrolavado de frentes</h4>
-								<p class="service-des">Limpieza profunda de fachadas y superficies exteriores de alto
-									impacto.</p>
-							</div>
-							<div class="service-icon">
-								<img src="assets/images/grupoup/cleaningup/lavadora-a-presion.png" alt="icon">
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 9 -->
-				<div class="col-lg-4 col-md-6">
-					<div class="single-service-box">
-						<div class="service-box-inner">
-							<div class="service-content">
-								<h4 class="service-title">Mantenimiento de piletas</h4>
-								<p class="service-des">Limpieza, control químico y mantenimiento periódico todo el año.
-								</p>
-							</div>
-							<div class="service-icon">
-								<img src="assets/images/grupoup/cleaningup/piscina.png" alt="icon">
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div><!--/.row-->
-		</div>
-	</div>
 
 	<!--==================================================-->
 	<!-- end Cleaning Up / Servicios -->
