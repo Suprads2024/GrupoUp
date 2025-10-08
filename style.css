@@ -1662,6 +1662,7 @@ h3.blog-title-two a:hover {
   position: relative;
   z-index: 1;
   margin-left: -96px;
+
 }
 
 /* Ocultar imagen en celulares */
@@ -5194,7 +5195,9 @@ ul.list-style-one li a:hover {
 .about-area.style-two .about-thumb img {
   border-radius: 20px;
 }
-
+ .about-thumb img{
+  border-radius: 50px;
+ }
 .about-area.style-two .about-thumb {
 
   position: relative;
