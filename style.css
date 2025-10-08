@@ -734,18 +734,18 @@ nav.solutek_menu span {
 }
   /* Si querés que el contenido respire un poco más en monitores enormes */
   .hero-area .container {
-    max-width: 1280px;
+    max-width: 1480px;
     /* subilo a gusto (1200–1360) */
   }
 
   /* (opcional) subir levemente tamaños de tipografía */
   .hero-header h1 {
-    font-size: 56px;
-    line-height: 1.15;
+    font-size: 65px;
+    line-height: 1.25;
   }
 
   .hero-header p {
-    font-size: 20px;
+    font-size: 30px;
     line-height: 32px;
   }
 
@@ -1879,6 +1879,7 @@ h4.about-title {
   background-image: url('assets/images/grupoup/4.png');
 }
 
+
 /* capa oscura opcional para que se lea bien el texto */
 .service-single-box::before {
   content: "";
@@ -1892,25 +1893,30 @@ h4.about-title {
 .service-content {
   position: relative;
   z-index: 2;
+  cursor: pointer;
 }
 
 
 
-.service-icon {
-  margin-bottom: 33px;
+/* Centrado del contenedor del logo */
+.service-icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height: 190px;           /* asegura altura homogénea de la card */
 }
 
-.service-icon img {
-  transform: none !important;
-  /* elimina rotaciones/inclinaciones */
-  object-fit: cover;
-  /* mantiene proporciones sin deformar */
-  width: 100%;
-  /* que ocupe todo el contenedor */
-  height: auto;
-  /* altura proporcional */
-  border-radius: 20px;
-  /* opcional, esquinas suaves */
+/* Tamaño y centrado del logo */
+.service-icon img{
+ 
+  display:block;
+  margin:0 auto;               /* centra horizontal */
+  width:auto;                  /* <— quitamos 100% */
+  max-width: 180px;            /* ← ajustá a gusto (antes ocupaba todo) */
+  max-height: 90px;            /* límite vertical para que no “crezca” */
+  height:auto;
+  object-fit: contain;         /* evita recortes de logos */
+  border-radius: 20px;         /* si querés bordes, dejalo */
 }
 
 h3.service-title {
@@ -2004,7 +2010,15 @@ p.service-text {
   position: relative;
   padding: clamp(32px, 5vw, 56px) 0;
 }
+.breadcumb-area.law {
+  position: relative;
+  padding: clamp(32px, 5vw, 80px) 0;
+}
 
+.breadcumb-area.safe {
+  position: relative;
+  padding: clamp(32px, 5vw, 80px) 0;
+}
 .breadcumb-area.cleaning::before {
   content: "";
   position: absolute;
@@ -2060,8 +2074,8 @@ p.service-text {
 }
 
 .hero-chip {
-  background: rgba(255, 255, 255, .96);
-  color: #0f2034;
+ 
+  
   border-color: rgba(16, 32, 52, .12);
 }
 
@@ -2116,12 +2130,12 @@ p.service-text {
   align-items: center;
   gap: 8px;
   font-size: 12px;
-  color: #10324d;
-  background: #eef1f4;
+  color: #ffffff;
+  
   border: 1px solid #e1e6ea;
   margin-left: 10px;
   padding: 12px 22px;
-  border-radius: 999px;
+  border-radius: 30px!important;
 
   /* ↓↓↓ nudge vertical */
   position: relative;
@@ -6978,6 +6992,96 @@ ul.list-style-one li a:hover {
     background-size: cover;
   }
 
+}
+/* ========= LANDINGS: ultra wide screens ========= */
+@media (min-width: 2000px){
+
+  /* Ampliamos el ancho útil del contenedor solo en los headers de landings */
+  .breadcumb-area.cleaning .container,
+  .breadcumb-area.safe .container,
+  .breadcumb-area.paint .container,
+  .breadcumb-area.law .container{
+    max-width: 1720px;           /* 1320 → 1720 para que no se vea “chico” */
+  }
+
+  /* Centramos el bloque hero vertical y horizontalmente */
+  .hero-cleaning,
+  .hero-safe,
+  .hero-paint,
+  .hero-law{
+    min-height: 75vh;
+    display: grid;
+    place-content: center;       /* centra el contenido dentro del hero */
+    gap: 12px;
+  }
+
+  /* Texto + escalado */
+  .hero-copy{ 
+    max-width: 20000px;           /* controla la línea para buena legibilidad */
+    margin: 0 auto;              /* centrado horizontal del bloque */
+    text-align: left;            /* mantené alineación izquierda */
+  }
+
+  .hero-copy h1{
+    /* 72–96px según ancho real; más grande y compacto */
+    font-size: clamp(72px, 4.2vw, 96px);
+    line-height: 1.06;
+    letter-spacing: -.015em;
+    width: 70%;                  /* más ancho que antes (60%) */
+    margin-top: 10px;
+  }
+
+  .hero-copy p{
+    font-size: clamp(24px, 1.2vw, 28px);
+    line-height: 1.45;
+    width: 60%;
+  }
+
+  .hero-bullets li{
+    font-size: clamp(22px, 1.1vw, 26px);
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+
+  /* Marca más grande */
+  .hero-brand img{
+    width: clamp(160px, 10vw, 220px);
+  }
+
+  /* CTA + chip más grandes y centrados a “ojo” */
+  .hero-cta{
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .btn-cta{
+    padding: 16px 28px;
+    font-size: 18px;
+    box-shadow: 0 12px 26px rgba(0,0,0,.12);
+  }
+
+  .hero-chip{
+    top: 0;                      /* quitamos el nudge */
+    font-size: 14px;
+    padding: 14px 24px;
+    line-height: 1;              /* centra perfecto el texto en la píldora */
+  }
+}
+
+/* Bonus: ajuste fino para 4K (opcional) */
+@media (min-width: 2560px){
+  .breadcumb-area.cleaning .container,
+  .breadcumb-area.safe .container,
+  .breadcumb-area.paint .container,
+  .breadcumb-area.law .container{
+    max-width: 1860px;
+  }
+  .hero-copy{ max-width: 1500px; }
+  .hero-copy h1{ font-size: clamp(84px, 4.6vw, 108px); width: 72%; }
+  .hero-copy p{ font-size: clamp(26px, 1.25vw, 30px); width: 62%; }
+  .hero-bullets li{ font-size: clamp(24px, 1.1vw, 28px); }
+  .btn-cta{ font-size: 20px; padding: 18px 32px; }
+  .hero-chip{ font-size: 15px; padding: 15px 26px; }
 }
 
 .breadcumb-area.about {

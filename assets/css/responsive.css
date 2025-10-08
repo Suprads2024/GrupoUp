@@ -3725,23 +3725,23 @@ line-height: 32px;
   }
 }
 /* ===== SAFE UP: bajar el contenido del header ===== */
-.breadcumb-area.safe .hero-cleaning{
+.breadcumb-area.safe .hero-cleaning .hero-law{
   padding-top: 72px;           /* empuja todo (logo + textos) hacia abajo */
 }
 
 /* pantallas muy grandes: un poco más */
 @media (min-width: 1400px){
-  .breadcumb-area.safe .hero-cleaning{ padding-top: 96px; }
+ .breadcumb-area.safe .hero-cleaning .hero-law{ padding-top: 96px; }
 }
 
 /* tablet */
 @media (max-width: 991.98px){
-  .breadcumb-area.safe .hero-cleaning{ padding-top: 40px; }
+ .breadcumb-area.safe .hero-cleaning .hero-law{ padding-top: 40px; }
 }
 
 /* mobile */
 @media (max-width: 575.98px){
-  .breadcumb-area.safe .hero-cleaning{ padding-top: 18px; }
+ .breadcumb-area.safe .hero-cleaning .hero-law{ padding-top: 18px; }
 }
 
 @media (max-width: 375px){
@@ -4730,7 +4730,7 @@ h3.blog-details-title.two {
     padding-bottom: 40px;
   }
 
-  .breadcumb-area.safe .hero-cleaning{
+.breadcumb-area.safe .hero-cleaning .hero-law{
     padding-top: 0px;
   }
 	.breadcumb-area.law{
