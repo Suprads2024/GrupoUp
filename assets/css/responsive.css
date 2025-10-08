@@ -4750,7 +4750,7 @@ h3.blog-details-title.two {
 }
 
 .hero-header p{
-    margin-bottom: 0px;
+    margin-bottom: 0px!important;
 }
 }
 
