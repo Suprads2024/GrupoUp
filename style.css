@@ -725,11 +725,13 @@ nav.solutek_menu span {
     background-image: url(assets/images/grupoup/headerinicio.png);
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: 1920px auto;
+  
 
 
   }
-
+.brand-area{
+     margin: 0px 49px 0!important;
+}
   /* Si querés que el contenido respire un poco más en monitores enormes */
   .hero-area .container {
     max-width: 1280px;
