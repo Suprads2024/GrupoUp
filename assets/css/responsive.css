@@ -3599,19 +3599,8 @@ h3.blog-details-title.two {
     text-align: center;       /* Forzamos centrado de títulos y párrafos */
   }
 
- .breadcumb-area.law{
-    background: url(../images/grupoup/tuderecho/6.jpg);
-        background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-      height: 85vh!important;
-  
- }
 
- .breadcumb-area.paint {
-       background: url(../images/grupoup/paintup/cel.jpg);
-       height: 85vh!important;
- }
+
 }
 @media (max-width:786px){
 
@@ -3764,7 +3753,7 @@ line-height: 32px;
 }
 
 /* small mobile :320px. */
-@media only screen and (min-width: 320px) and (max-width: 479px) {
+@media (max-width: 479px) {
 /* solutek home page one */
 .solutek_nav_manu {
     display: none;
@@ -3790,13 +3779,13 @@ line-height: 32px;
 
 /* hero area */
 .hero-area {
-    height: 100vh;
+    height: 80vh;
     margin: 0;
     margin-bottom: -10px;
 }
 
 .service-pill img {
-  width: 50%;
+  width: 80%;
   height: auto;
   display: block;
 }
@@ -4416,7 +4405,7 @@ margin: 50px 10px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: 100vh;
+    height: 80vh;
 }
 
 
@@ -4727,10 +4716,63 @@ h3.blog-details-title.two {
 .blog-details-thumb img {
     margin-bottom: 20px;
 }
-	
+
+.breadcumb-area.cleaning,
+.breadcumb-area.safe,
+.breadcumb-area.paint
+ {
+    height: auto;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px; /* opcional: ajustá si querés más aire arriba */
+    padding-bottom: 40px;
+  }
+
+  .breadcumb-area.safe .hero-cleaning{
+    padding-top: 0px;
+  }
+	.breadcumb-area.law{
+       height: 70vh;
+            min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px; /* opcional: ajustá si querés más aire arriba */
+    padding-bottom: 40px;
+    }
+
+    .brand-area {
+
+  margin: -20px 0px 0;
+  
+}
+}
+
+@media (max-width:400px){
+    /* hero area */
+.hero-area {
+    height: 90vh;
+    margin: 0;
+    margin-bottom: -10px;
 }
 
 
+.breadcumb-area.law{
+       height: 85vh;
+}}
 
+@media (max-width:378px){
+    .breadcumb-area.cleaning,
+.breadcumb-area.safe,
+.breadcumb-area.paint,
+.breadcumb-area.law {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
 
+}
 
