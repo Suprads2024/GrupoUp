@@ -4748,6 +4748,10 @@ h3.blog-details-title.two {
   margin: -20px 0px 0;
   
 }
+
+.hero-header p{
+    margin-bottom: 0px;
+}
 }
 
 @media (max-width:400px){
