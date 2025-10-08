@@ -793,8 +793,8 @@ nav.solutek_menu span {
     margin-right: auto;
     grid-template-columns: repeat(2, minmax(140px, 1fr));
     /* 2x2 como el boceto */
-    gap: 22px;
-    margin-bottom: 0px;
+    gap: 0px;
+    margin-bottom: 10px;
   }
 
   .service-pill {
