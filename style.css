@@ -6882,6 +6882,7 @@ ul.list-style-one li a:hover {
 
 @media (max-width: 575.98px) {
   .services-min__head {
+    margin-top: 50px;
     margin-bottom: 16px;
   }
 
