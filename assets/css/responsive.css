@@ -3604,11 +3604,13 @@ h3.blog-details-title.two {
         background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+      height: 85vh!important;
   
  }
 
  .breadcumb-area.paint {
        background: url(../images/grupoup/paintup/cel.jpg);
+       height: 85vh!important;
  }
 }
 @media (max-width:786px){
@@ -3721,12 +3723,16 @@ line-height: 32px;
     justify-content: center;
     margin-bottom: 10px;
   }
+    .hero-cta{ justify-content: center; }          /* no obligatorio, ayuda a centrar */
+
   .hero-chip{
-    width: 100%;
-    justify-content: center;
+    width: auto !important;                      /* anula el 100% anterior */
+    flex: 0 0 auto;                               /* que no se estire en flex */
+    padding: 12px 10px;                            /* 5px por costado */
+    white-space: nowrap;                          /* ocupa lo que mide el texto */
+    justify-content: center;                      /* icono + texto centrados */
     margin-left: 0px;
     font-size: 10px;
-    padding: 12px 18px;
   }
 }
 /* ===== SAFE UP: bajar el contenido del header ===== */
