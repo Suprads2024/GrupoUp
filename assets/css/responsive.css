@@ -436,7 +436,6 @@ h4.blog-details-title {
 
 }
 
-/* Normal desktop :1200px. */
 @media (min-width: 1200px) and (max-width: 1299px) {
 /* home page one */
 .solutek_nav_manu {
@@ -3738,6 +3737,63 @@ line-height: 32px;
 @media (max-width: 991.98px){
  .breadcumb-area.safe .hero-cleaning .hero-law{ padding-top: 40px; }
 }
+/* ====== DESKTOP GRANDE (se mantiene tu diseño actual) ====== */
+@media (min-width: 1400px){
+  .hero-area .container { max-width: 1100px; }
+  .brand-area {
+    background: #182653;
+    padding: 31px 0;
+    margin: -150px 49px 0;    /* tu solapamiento original */
+    left: 0; right: 0;
+    border-radius: 0 0 50px 50px;
+  }
+}
+
+/* ====== MEDIO (1200–1399 px): hace todo proporcional y despega la banda ====== */
+@media (max-width: 1399.98px){
+    .header-btn a{
+        font-size: 10px;
+    }
+.solutek_menu > ul > li > a{
+    font-size: 15px;
+}
+  /* Evita que el header sticky tape el hero y da aire abajo */
+  .hero-area{
+    position: relative;
+    padding: 96px 0 56px;           /* +padding-bottom para que NO pise la banda */
+    z-index: 1;
+  }
+
+  /* 1) Caja del hero más “corta” y proporcionada para que no invada los logos */
+  .hero-area .container{
+    max-width: clamp(820px, 62vw, 1200px); /* más chica que 1100 en monitores medianos */
+  }
+
+  /* (Opcional) Limitar ancho del bloque de textos si usás otro container adentro */
+  .hero-header{ max-width: 900px; }
+
+  /* Escala de tipografías y respiración */
+  .hero-header h1{ font-size: clamp(36px, 4.2vw, 52px); line-height: 1.08; margin-bottom: 14px; }
+  .hero-header p { font-size: clamp(15px, 1.35vw, 18px); max-width: 780px; margin-bottom: 20px; }
+
+  /* Tira de servicios y CTAs un poco más compactos */
+  .services-strip{ display:flex; flex-wrap:wrap; gap:26px; margin: 22px 0; }
+  .service-pill img{ height: 100px; width: auto; }        /* bajamos altura para que todo entre cómodo */
+  .cta-row{ display:flex; flex-wrap:wrap; gap:14px; }
+
+  /* 2) Banda inferior: fuera el margen negativo en medianos → más abajo y proporcional */
+  .brand-area{
+    position: relative;
+    z-index: 0;
+    background: #182653;
+    padding: clamp(18px, 2.4vw, 28px) 0;
+    margin: clamp(20px, 6vw, 0px) 32px 0;   /* ► BAJAMOS la banda de forma proporcional */
+    border-radius: 20px;
+  }
+
+  /* Pequeños ajustes para evitar desbordes horizontales */
+  body{ overflow-x:hidden; }
+}
 
 /* mobile */
 @media (max-width: 575.98px){
@@ -4779,4 +4835,47 @@ h3.blog-details-title.two {
 }
 
 }
+@media (max-width:1450px){
+.logo .logo_img img{
+    max-width: 140px;
+}
+    .hero-area{
+              
+        margin: -80px 32px 0;
+    }
+/* Asegura que los 4 logos entren en un solo renglón */
+.hero-area .container {
+  max-width: 1400px; /* más ancho que los 1100px actuales */
+  width: 90%;        /* para que siga siendo responsivo */
+  margin: 0 auto;    /* centra el contenido */
+}
 
+/* Ajuste de la tira de servicios */
+.services-strip {
+  display: flex;
+  justify-content: center;   /* centra horizontalmente */
+  align-items: center;       /* alinea verticalmente */
+  flex-wrap: nowrap;         /* fuerza que estén en una sola línea */
+  gap: 60px;                 /* separa los logos */
+  margin: 40px 0;            /* margen superior e inferior */
+  overflow-x: auto;          /* por si el espacio no alcanza en pantallas pequeñas */
+}
+
+/* Tamaño de los logos */
+.service-pill img {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}}
+
+/* En pantallas más chicas (por ejemplo, celulares o notebooks angostas)
+   se permite que pasen a dos líneas o que hagan scroll horizontal */
+@media (max-width: 1199px) {
+  .services-strip {
+    flex-wrap: wrap;        /* permite 2 filas si no entran */
+    gap: 40px 60px;         /* ajusta los espacios */
+  }
+  .hero-area .container {
+    max-width: 1000px;
+  }
+}
