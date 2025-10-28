@@ -3893,12 +3893,7 @@
         margin-bottom: 20px;
     }
 
-       .services-strip {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px; /* separa las cajas */
-    justify-items: center;
-  }
+   
 
   .services-strip .service-pill {
     width: 100%;
@@ -3938,6 +3933,12 @@
     .breadcumb-area.safe .hero-cleaning .hero-law {
         padding-top: 18px;
     }
+        .services-strip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* separa las cajas */
+    justify-items: center;
+  }
 }
 
 @media (max-width: 375px) {
