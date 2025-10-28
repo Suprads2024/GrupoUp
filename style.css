@@ -7139,7 +7139,7 @@ padding: 0 clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 
   padding: 230px 0 180px;
 }
 .breadcumb-area.proyectos{
-  background: url(assets/images/grupoup/fondotrabajos.png);
+  background: url(assets/images/grupoup/fondoproyectos.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;          /* << llena el contenedor, puede recortar */
