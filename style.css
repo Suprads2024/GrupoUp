@@ -7145,8 +7145,35 @@ padding: 0 clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 
   background-size: cover;          /* << llena el contenedor, puede recortar */
   min-height: 480px;               /* asegura alto mínimo del banner */
   padding: clamp(80px, 10vw, 160px) 0;  /* ajusta vertical según viewport */
+  position: relative;
+  display: flex;                 /* usamos flexbox para centrar */
+  align-items: center;           /* centra vertical */
+  justify-content: center;       /* centra horizontal */
+  text-align: center;            /* centra el texto */
 }
 
+/* Contenido del texto (título y breadcrumbs) */
+.breadcumb-area.proyectos .breadcumb-content {
+  color: #fff;
+  text-align: center;
+  margin: 0;                    /* eliminamos márgenes superiores */
+}
+/* Fondo alternativo para celulares */
+@media (max-width: 480px) {
+  .breadcumb-area.proyectos {
+    background-image: url(assets/images/grupoup/trabajoscelular.png); /* imagen optimizada para móvil */
+    background-position: center top;  /* centrado arriba */
+    background-size: cover;           /* llena toda la caja */
+     /* podés ajustar según diseño */
+    padding: 60px 0;
+  }
+
+  .case-study-area{
+    padding:20px 0 90px!important;
+  }
+
+  
+}
 /* Si usás un contenedor interno con borde redondeado/sombra que “achica” el área,
    asegurate de que NO le esté tapando el fondo.  */
 .breadcumb-area.proyectos > .container{
