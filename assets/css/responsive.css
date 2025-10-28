@@ -3711,15 +3711,9 @@
 /* ====== Desktop: más espacio entre textos ====== */
 @media (min-width: 992px) {
     .hero-copy h1 {
-        margin-bottom: 28px;
+        margin-bottom: 10px;
         /* + aire bajo el título */
         line-height: 1.12;
-    }
-
-    .hero-copy p {
-        margin: 18px 0 20px;
-        /* separa párrafo de título y bullets */
-        line-height: 1.7;
     }
 
     .hero-bullets {
@@ -3892,15 +3886,31 @@
         max-width: 780px;
         margin-bottom: 20px;
     }
+.hero-copy h1{
+    font-size: 35px;
+} .hero-cta {
+        margin-top: 0px;
 
-   
+    }
+   .btn-cta{
+    margin-top: 0px;
+   }
+    .hero-copy p {
+        margin: 8px 0 0px;
+        /* separa párrafo de título y bullets */
+        line-height: 1.2;
+        font-size: 15px;
+    }
+.hero-bullets li{
+    font-size: 15px;
+}
 
   .services-strip .service-pill {
     width: 100%;
     max-width: 140px; /* o el ancho que prefieras */
   }
     .service-pill img {
-        height: 100px;
+        height: 80px;
         width: auto;
     }
 
@@ -5018,12 +5028,7 @@
     }
 
   
-    /* Tamaño de los logos */
-    .service-pill img {
-        height: 100px;
-        width: auto;
-        object-fit: contain;
-    }
+  
 }
 
 /* En pantallas más chicas (por ejemplo, celulares o notebooks angostas)
