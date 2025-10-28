@@ -1,0 +1,340 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <!-- Google Tag Manager -->
+	<script>(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-N3G8R64D');</script>
+	<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Grupo Up - Hospital</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+	<link rel="icon" type="image/png" sizes="56x56" href="assets/images/grupoup/iso.png">
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all">
+    <!-- carousel CSS -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css" media="all">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.css" type="text/css" media="all">
+    <!-- animated-text CSS -->
+    <link rel="stylesheet" href="assets/css/animated-text.css" type="text/css" media="all">
+    <!-- font-awesome CSS -->
+    <link rel="stylesheet" href="assets/css/all.min.css" type="text/css" media="all">
+    <!-- font-flaticon CSS -->
+    <link rel="stylesheet" href="assets/css/flaticon.css" type="text/css" media="all">
+    <!-- theme-default CSS -->
+    <link rel="stylesheet" href="assets/css/theme-default.css" type="text/css" media="all">
+    <!-- meanmenu CSS -->
+    <link rel="stylesheet" href="assets/css/meanmenu.min.css" type="text/css" media="all">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="style.css" type="text/css" media="all">
+    <!-- transitions CSS -->
+    <link rel="stylesheet" href="assets/css/owl.transitions.css" type="text/css" media="all">
+    <link rel="stylesheet" href="assets/css/splide.min.css" type="text/css" media="all">
+  <!-- proyectos CSS -->
+      <link rel="stylesheet" href="assets/css/proyectos.css" type="text/css" media="all">
+    <!-- venobox CSS -->
+    <link rel="stylesheet" href="venobox/venobox.css" type="text/css" media="all">
+    <!-- responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css" type="text/css" media="all">
+    <!-- modernizr js -->
+    <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3G8R64D" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <script>
+        document.addEventListener('click', function (e) {
+            const bar = e.target.closest('.mean-bar');
+            if (!bar) return;
+
+            // área donde MeanMenu dibuja el ::before (ajusta si querés)
+            const r = bar.getBoundingClientRect();
+            const tapX = e.clientX, tapY = e.clientY;
+            const hit = tapX < (r.left + 180) && tapY < (r.top + 180) && tapY > r.top;
+
+            // si no tocaste el botón hamburguesa y fue en esa zona: al index
+            const burger = bar.querySelector('.meanmenu-reveal');
+            if (hit && (!burger || !burger.contains(e.target))) {
+                window.location.href = 'index.html';
+            }
+        }, true);
+    </script>
+
+    <!-- WhatsApp flotante -->
+    <a class="wa-float" href="https://wa.me/3426287932?text=Hola%20Grupo%20UP!%20Quisiera%20un%20presupuesto."
+        target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+        <img src="assets/images/whatsapp.png" alt="" />
+        <span class="wa-tooltip">Chateá con nosotros</span>
+    </a>
+
+
+
+    <!--==================================================-->
+    <!-- Start solutek Main Menu Area -->
+    <!--==================================================-->
+    <div id="sticky-header" class="solutek_nav_manu">
+        <div class="container-fluid">
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-2">
+                    <div class="logo">
+                        <a class="logo_img" href="index.html" title="Grupo Up">
+                            <img src="assets/images/grupoup/logo2.png" alt="logo">
+                        </a>
+                        <a class="main_sticky" href="index.html" title="Grupo Up">
+                            <img src="assets/images/grupoup/grupoupblanco.png" alt="logo sticky">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <nav class="solutek_menu">
+                        <ul class="nav_scroll">
+                            <li><a href="cleaning-up.html">Cleaning Up</a></li>
+                            <li><a href="safe-up.html">Safe Up</a></li>
+                            <li><a href="paint-up.html">Paint Up</a></li>
+                            <li><a href="tu-derecho.html">Tu Derecho</a></li>
+                            <li><a href="#somos">Quienes Somos</a></li>
+                            <li><a href="contact.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-lg-2">
+                    <div class="header-btn">
+                        <a href="contact.html">Solicitar presupuesto <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- solutek Mobile Menu Area -->
+    <div class="mobile-menu-area sticky d-sm-block d-md-block d-lg-none">
+        <div class="mobile-menu">
+            <nav class="solutek_menu">
+                <ul class="nav_scroll">
+                    <li><a href="cleaning-up.html">Cleaning Up</a></li>
+                    <li><a href="safe-up.html">Safe Up</a></li>
+                    <li><a href="paint-up.html">Paint Up</a></li>
+                    <li><a href="tu-derecho.html">Tu Derecho</a></li>
+                    <li><a href="#somos">Quienes Somos</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+
+
+
+<!-- =====================  PROYECTO: FORTRESS 5 SUCURSALES  ===================== -->
+<section class="gu-project" id="proyecto-fortress">
+  <div class="gu-container">
+    <header class="gu-head">
+      <p class="gu-kicker">Proyectos realizados · Cleaning Up</p>
+      <h2 class="gu-title">Fortress – 5 Sucursales</h2>
+      <h3 class="gu-subtitle">Limpieza diaria en gimnasios</h3>
+    </header>
+
+    <div class="gu-grid">
+      <article class="gu-body">
+        <p>
+          Brindamos limpieza general diaria en 5 sucursales de <strong>Fortress</strong>, cubriendo áreas de 
+          entrenamiento, vestuarios y zonas comunes. Espacios seguros, higiénicos y acogedores, que mantienen 
+          el estándar de calidad institucional y potencian la experiencia del socio.
+        </p>
+
+        <h4 class="gu-section-title">Limpieza general diaria en gimnasios</h4>
+        <p>
+          En <strong>Fortress</strong>, reconocida cadena de gimnasios con instalaciones modernas y equipamiento 
+          de última generación, nuestro equipo de <strong>Cleaning Up (Grupo Up)</strong> brinda la limpieza 
+          general diaria en 5 de sus sucursales.
+        </p>
+
+        <p>
+          Coordinamos la limpieza de áreas de entrenamiento, vestuarios, zonas comunes y espacios de 
+          circulación, garantizando ambientes seguros, higiénicos y acogedores, donde los socios pueden 
+          entrenar sin preocuparse por nada más.
+        </p>
+
+        <p>
+          Nuestro compromiso diario combina eficiencia, profesionalismo y constancia, asegurando que cada 
+          gimnasio Fortress mantenga su estándar de calidad institucional, reflejando confianza en cada 
+          detalle y potenciando la experiencia del usuario.
+        </p>
+
+        <p>
+          Una operación que no se ve, pero se siente — la base sobre la que se construye el bienestar.
+        </p>
+
+        <ul class="gu-meta">
+          <li><span>Equipo</span> Personal de limpieza diario en 5 sedes</li>
+          <li><span>Alcance</span> Limpieza general diaria en gimnasios</li>
+          <li><span>Ubicación</span> Ciudad de Santa Fe y alrededores</li>
+          <li><span>Cliente</span> Fortress · Cadena de gimnasios</li>
+        </ul>
+      </article>
+
+      <div class="gu-media-list">
+        <figure class="gu-media">
+          <img src="assets/images/grupoup/proyectos/fortress-1.jpg"
+               alt="Limpieza en áreas de entrenamiento Fortress">
+          <figcaption>Cleaning Up · Grupo UP</figcaption>
+        </figure>
+
+        <figure class="gu-media">
+          <img src="assets/images/grupoup/proyectos/fortress-2.jpg"
+               alt="Limpieza y mantenimiento de vestuarios Fortress">
+          <figcaption>Cleaning Up · Grupo UP</figcaption>
+        </figure>
+
+        <figure class="gu-media">
+          <img src="assets/images/grupoup/proyectos/fortress-3.jpg"
+               alt="Espacios comunes impecables en gimnasios Fortress">
+          <figcaption>Cleaning Up · Grupo UP</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+  <!-- ===== FOOTER Grupo UP ===== -->
+  <footer class="footer-up" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Marca / descripción / redes -->
+        <div class="footer-col">
+          <a href="index.html" class="footer-logo" aria-label="Ir al inicio">
+            <img src="assets/images/grupoup/grupouplogo.png" alt="Grupo UP • Logotipo">
+          </a>
+          <p class="footer-text">
+            Soluciones integrales y confiables para tu empresa. Compromiso, seguridad y calidad operacional en cada
+            servicio.
+          </p>
+
+          <nav class="footer-social" aria-label="Redes sociales">
+
+            <a href="https://www.instagram.com/cleaningup.limpieza/" aria-label="Instagram">
+              <!-- icono IG -->
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path fill="currentColor"
+                  d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7m5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5m0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5M18 6.25a.75.75 0 1 1-.75.75.75.75 0 0 1 .75-.75Z" />
+              </svg>
+            </a>
+
+          </nav>
+        </div>
+
+        <!-- Col 2: Espaciador (ocupa el lugar de "Navegación") -->
+        <div class="footer-col footer-spacer" role="presentation" aria-hidden="true"></div>
+
+        <!-- Col 3: Servicios -->
+        <div class="footer-col">
+          <h3 class="footer-title">Servicios</h3>
+          <ul class="footer-links">
+            <li><a href="safe-up.html">Safe Up</a></li>
+            <li><a href="cleaning-up.html">Cleaning Up</a></li>
+            <li><a href="paint-up.html">Paint Up</a></li>
+            <li><a href="tu-derecho.html">Tu Derecho</a></li>
+
+          </ul>
+        </div>
+
+        <!-- Col 4: Contacto / Newsletter -->
+        <div class="footer-col">
+          <h3 class="footer-title">Contacto</h3>
+          <ul class="footer-contact">
+            <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Santa Fe: Bv. Pellegrini 2876 <br>
+              Rosario: Santiago 235</li>
+            <li><i class="bi bi-telephone-fill" aria-hidden="true"></i> Santa Fe: 342-6287932 <br> Rosario: 341-2421456</li>
+                 
+            <li><i class="bi bi-envelope-fill" aria-hidden="true"></i> Grupoup.servicios@gmail.com</li>
+          </ul>
+
+
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Grupo UP. Todos los derechos reservados.</p>
+        <!--<ul class="legal-links">
+          <li><a href="privacy.html">Política de Privacidad</a></li>
+          <li><a href="terms.html">Términos y Condiciones</a></li>
+        </ul>-->
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Año dinámico en el copyright
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+
+    <!-- jquery js -->
+    <script src="assets/js/vendor/jquery-3.6.2.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- carousel js -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- counterup js -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- waypoints js -->
+    <script src="assets/js/waypoints.min.js"></script>
+    <!-- wow js -->
+    <script src="assets/js/wow.js"></script>
+    <!-- imagesloaded js -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <!-- venobox js -->
+    <script src="venobox/venobox.js"></script>
+    <!--  animated-text js -->
+    <script src="assets/js/animated-text.js"></script>
+    <!-- venobox min js -->
+    <script src="venobox/venobox.min.js"></script>
+    <!-- isotope js -->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- jquery meanmenu js -->
+    <script src="assets/js/jquery.meanmenu.js"></script>
+    <!-- jquery scrollup js -->
+    <script src="assets/js/jquery.scrollUp.js"></script>
+    <script src="assets/js/jquery.barfiller.js"></script>
+    <script src="assets/js/typed.js"></script>
+    <!-- jquery js -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/vanilla-tilt.min.js"></script>
+    <!-- partial -->
+
+    <script src="assets/js/splide.min.js"></script>
+    <!-- theme js -->
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>

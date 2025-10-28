@@ -1,0 +1,172 @@
+/* ======= Tokens de marca (ajustá a tu manual) ======= */
+:root{
+  --gu-brand: #1DAE5A;         /* acento Grupo UP / Cleaning Up */
+  --gu-brand-ink: #0f5e33;     /* acento oscuro */
+  --gu-ink: #0B1020;           /* texto principal */
+  --gu-ink-2: #4A5568;         /* texto secundario */
+  --gu-bg: #F7FAFC;            /* fondo suave */
+  --gu-card: #FFFFFF;          /* tarjetas */
+  --gu-border: #E2E8F0;        /* bordes */
+}
+
+/* ======= Base tipográfica según manual ======= */
+.gu-project {
+  --title-font: "LeagueSpartan-Bold", "League Spartan", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --text-font: "Manrope", "Libre Baskerville", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  background: var(--gu-bg);
+  color: var(--gu-ink);
+  padding: clamp(36px, 6vw, 80px) 0;
+}
+
+.gu-container{
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+}
+
+.gu-head{
+  margin-bottom: clamp(20px, 3vw, 28px);
+}
+
+.gu-kicker{
+  font: 600 12px/1 var(--text-font);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gu-brand-ink);
+  margin: 0 0 8px 0;
+}
+
+.gu-title{
+  font-family: var(--title-font);
+  font-size: clamp(28px, 4.2vw, 44px);
+  line-height: 1.1;
+  margin: 0 0 8px 0;
+}
+
+.gu-subtitle{
+  font: 600 clamp(16px, 2.2vw, 20px)/1.35 var(--text-font);
+  color: var(--gu-ink-2);
+  margin: 0;
+}
+
+/* ======= Layout ======= */
+.gu-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(20px, 3.5vw, 36px);
+  margin-top: clamp(20px, 3vw, 28px);
+}
+
+.gu-body{
+  background: var(--gu-card);
+  border: 1px solid var(--gu-border);
+  border-radius: 16px;
+  padding: clamp(18px, 3vw, 28px);
+  box-shadow: 0 8px 30px rgba(0,0,0,.04);
+}
+
+.gu-body p{
+  font: 400 16px/1.7 var(--text-font);
+  color: var(--gu-ink);
+  margin: 0 0 16px 0;
+}
+
+.gu-section-title{
+  font-family: var(--title-font);
+  font-size: clamp(18px, 2.6vw, 24px);
+  margin: 20px 0 10px 0;
+}
+
+/* Meta list */
+.gu-meta{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 20px 0 0 0;
+  padding: 16px;
+  border: 1px dashed var(--gu-border);
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fff, #fafcff);
+  list-style: none;
+}
+
+.gu-meta li{
+  font: 500 14px/1.5 var(--text-font);
+}
+.gu-meta li span{
+  display: inline-block;
+  font-weight: 700;
+  color: var(--gu-brand-ink);
+  margin-right: 6px;
+}
+
+/* Media */
+.gu-media{
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--gu-border);
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(0,0,0,.04);
+  align-self: start;
+}
+
+.gu-media img{
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.gu-media figcaption{
+  font: 600 12px/1 var(--text-font);
+  letter-spacing: .04em;
+  color: var(--gu-brand-ink);
+  padding: 10px 14px;
+  background: linear-gradient(0deg, rgba(29,174,90,.08), rgba(29,174,90,.08)) #fff;
+  border-top: 1px solid var(--gu-border);
+}
+
+/* ======= Responsive 2 columnas ======= */
+@media (min-width: 992px){
+  .gu-grid{
+    grid-template-columns: 1.15fr .85fr; /* texto / imagen */
+    align-items: start;
+  }
+}
+
+/* ======= Detalle: subrayado de marca en títulos ======= */
+.gu-title{
+  position: relative;
+  display: inline-block;
+}
+.gu-title::after{
+  content: "";
+  position: absolute;
+  left: 0; bottom: -6px;
+  width: 56%;
+  height: 6px;
+  border-radius: 6px;
+  background: var(--gu-brand);
+}
+/* Lista vertical de imágenes en la columna derecha */
+.gu-media-list{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(12px, 2vw, 16px);
+  align-self: start;
+}
+
+/* Reutiliza .gu-media existente (tarjeta + imagen + caption) */
+.gu-media img{
+  aspect-ratio: 16 / 10;   /* mantené relación y recorte prolijo */
+  object-fit: cover;
+}
+
+/* En desktop sigue siendo 2 columnas (texto / galería) */
+@media (min-width: 992px){
+  .gu-grid{
+    grid-template-columns: 1.15fr .85fr;
+  }
+}

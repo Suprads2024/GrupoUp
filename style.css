@@ -7138,9 +7138,23 @@ padding: 0 clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 
 .breadcumb-area.about {
   padding: 230px 0 180px;
 }
+.breadcumb-area.proyectos{
+  background: url(assets/images/grupoup/breadcumb-bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;          /* << llena el contenedor, puede recortar */
+  min-height: 450px;               /* asegura alto mínimo del banner */
+  padding: clamp(80px, 10vw, 160px) 0;  /* ajusta vertical según viewport */
+}
 
+/* Si usás un contenedor interno con borde redondeado/sombra que “achica” el área,
+   asegurate de que NO le esté tapando el fondo.  */
+.breadcumb-area.proyectos > .container{
+  position: relative;
+  z-index: 1;
+}
 .breadcumb-content {
-  margin-top: 100px;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -9563,6 +9577,7 @@ button.icons {
   display: inline-block;
   background: #fff;
   border-radius: 5px;
+ font-family: 'LeagueSpartan-Medium';
 }
 
 .case_study_menu ul li:hover {
@@ -9572,7 +9587,7 @@ button.icons {
 .case_study_menu ul li::before {
   animation: opacityFallbackOut 0.5s step-end forwards;
   backface-visibility: hidden;
-  background-color: #ff3b00;
+  background-color: #1DAE5A;
   clip-path: polygon(-1% 0, 0 0, -25% 104%, -1% 100%);
   content: "";
   height: 100%;
@@ -9597,7 +9612,7 @@ button.icons {
 
 li.current_menu_item {
   color: #fff !important;
-  background: #ff3b00 !important;
+  background: #16284e!important;
 }
 
 .case-study-single-box {
@@ -9631,7 +9646,7 @@ li.current_menu_item {
   font-size: 16px;
   line-height: 26px;
 
-  font-weight: 400;
+   font-family: 'LeagueSpartan-Regular';
   margin: 0;
 }
 
@@ -9641,15 +9656,15 @@ li.current_menu_item {
 }
 
 .case-study-title h3 a {
-  font-size: 22px;
+  font-size: 20px;
   text-transform: uppercase;
   color: #000000;
-  font-weight: 600;
+  font-family: 'LeagueSpartan-Bold';
   transition: 0.5s;
 }
 
 .case-study-title h3 a:hover {
-  color: #ff3b00;
+  color: #1DAE5A;
 }
 
 .case-study-icon {
@@ -9663,7 +9678,7 @@ li.current_menu_item {
 }
 
 .case-study-content:hover .case-study-icon {
-  background: #ff3b00;
+  background: #1DAE5A;
 }
 
 .case-study-icon i {
