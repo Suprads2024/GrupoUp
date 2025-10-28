@@ -7139,11 +7139,11 @@ padding: 0 clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 
   padding: 230px 0 180px;
 }
 .breadcumb-area.proyectos{
-  background: url(assets/images/grupoup/breadcumb-bg.png);
+  background: url(assets/images/grupoup/fondotrabajos.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;          /* << llena el contenedor, puede recortar */
-  min-height: 450px;               /* asegura alto mínimo del banner */
+  min-height: 480px;               /* asegura alto mínimo del banner */
   padding: clamp(80px, 10vw, 160px) 0;  /* ajusta vertical según viewport */
 }
 
