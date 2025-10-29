@@ -665,7 +665,7 @@ nav.solutek_menu span {
 
 .service-pill img {
   width: auto;
-height: 100px;
+  height: 100px;
   display: block;
 }
 
@@ -725,13 +725,15 @@ height: 100px;
     background-image: url(assets/images/grupoup/headerinicio.png);
     background-repeat: no-repeat;
     background-position: top center;
-  
+
 
 
   }
-.brand-area{
-     margin: 0px 49px 0!important;
-}
+
+  .brand-area {
+    margin: 0px 49px 0 !important;
+  }
+
   /* Si querés que el contenido respire un poco más en monitores enormes */
   .hero-area .container {
     max-width: 1480px;
@@ -1899,24 +1901,31 @@ h4.about-title {
 
 
 /* Centrado del contenedor del logo */
-.service-icon{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-height: 190px;           /* asegura altura homogénea de la card */
+.service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 190px;
+  /* asegura altura homogénea de la card */
 }
 
 /* Tamaño y centrado del logo */
-.service-icon img{
- 
-  display:block;
-  margin:0 auto;               /* centra horizontal */
-  width:auto;                  /* <— quitamos 100% */
-  max-width: 180px;            /* ← ajustá a gusto (antes ocupaba todo) */
-  max-height: 90px;            /* límite vertical para que no “crezca” */
-  height:auto;
-  object-fit: contain;         /* evita recortes de logos */
-  border-radius: 20px;         /* si querés bordes, dejalo */
+.service-icon img {
+
+  display: block;
+  margin: 0 auto;
+  /* centra horizontal */
+  width: auto;
+  /* <— quitamos 100% */
+  max-width: 180px;
+  /* ← ajustá a gusto (antes ocupaba todo) */
+  max-height: 90px;
+  /* límite vertical para que no “crezca” */
+  height: auto;
+  object-fit: contain;
+  /* evita recortes de logos */
+  border-radius: 20px;
+  /* si querés bordes, dejalo */
 }
 
 h3.service-title {
@@ -2010,6 +2019,7 @@ p.service-text {
   position: relative;
   padding: clamp(32px, 5vw, 56px) 0;
 }
+
 .breadcumb-area.law {
   position: relative;
   padding: clamp(32px, 5vw, 80px) 0;
@@ -2019,6 +2029,7 @@ p.service-text {
   position: relative;
   padding: clamp(32px, 5vw, 80px) 0;
 }
+
 .breadcumb-area.cleaning::before {
   content: "";
   position: absolute;
@@ -2074,8 +2085,8 @@ p.service-text {
 }
 
 .hero-chip {
- 
-  
+
+
   border-color: rgba(16, 32, 52, .12);
 }
 
@@ -2123,7 +2134,8 @@ p.service-text {
   background: #159a4f;
   color: white;
 }
-.hero-chip{
+
+.hero-chip {
   /* lo que ya tenés… */
   font-family: 'LeagueSpartan-Bold';
   display: inline-flex;
@@ -2131,21 +2143,25 @@ p.service-text {
   gap: 8px;
   font-size: 12px;
   color: #ffffff;
-  
+
   border: 1px solid #e1e6ea;
   margin-left: 10px;
   padding: 12px 22px;
-  border-radius: 30px!important;
+  border-radius: 30px !important;
 
   /* ↓↓↓ nudge vertical */
   position: relative;
-  top: 4px;          /* probá 2–6px según tu ojo */
+  top: 4px;
+  /* probá 2–6px según tu ojo */
 }
 
 /* opcional: en mobile lo dejamos centrado de nuevo */
-@media (max-width: 575.98px){
-  .hero-chip{ top: 0; }
+@media (max-width: 575.98px) {
+  .hero-chip {
+    top: 0;
+  }
 }
+
 .hero-chip img {
   width: 14px;
   height: 14px;
@@ -3926,9 +3942,11 @@ ul.list-style-one li a:hover {
   border-radius: 40px 40px 0 0;
   height: 75vh;
 }
-.solutek_nav_manu.style-two .solutek_menu > ul > li > a {
+
+.solutek_nav_manu.style-two .solutek_menu>ul>li>a {
   color: #232323 !important;
 }
+
 .hero-area.style-two .hero-contant h5 {
   margin-left: 18px;
 }
@@ -4728,13 +4746,16 @@ ul.list-style-one li a:hover {
 .step.s5 {
   background: linear-gradient(180deg, #1d4b77, #1f547f);
 }
+
 /* ==== ESTILO SOLO PARA EL DESTACADO ==== */
 .step.destacado {
- font-size: 25px;
+  font-size: 25px;
 }
-.step.destacado p{
+
+.step.destacado p {
   font-size: 20px;
 }
+
 .step.destacado .step-title {
   color: #1DAE5A;
   font-weight: 700;
@@ -4754,22 +4775,25 @@ ul.list-style-one li a:hover {
 
 .step.destacado .step-icon img {
   width: 55px;
- 
+
   display: block;
-  filter: drop-shadow(0 0 3px rgba(29,174,90,0.4));
+  filter: drop-shadow(0 0 3px rgba(29, 174, 90, 0.4));
 }
+
 @keyframes pulseHighlight {
   0% {
     box-shadow: 0 0 0 0 rgba(29, 174, 90, 0.9),
-                0 0 10px 4px rgba(29, 174, 90, 0.6);
+      0 0 10px 4px rgba(29, 174, 90, 0.6);
   }
+
   60% {
     box-shadow: 0 0 0 22px rgba(29, 174, 90, 0),
-                0 0 18px 5px rgba(29, 174, 90, 0.45);
+      0 0 18px 5px rgba(29, 174, 90, 0.45);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(29, 174, 90, 0),
-                0 0 10px 4px rgba(29, 174, 90, 0.6);
+      0 0 10px 4px rgba(29, 174, 90, 0.6);
   }
 }
 
@@ -4909,7 +4933,7 @@ ul.list-style-one li a:hover {
   background: linear-gradient(180deg, var(--up-navy), var(--up-navy-2));
   color: var(--up-text-on-dark);
   border-radius: 26px;
-padding: 0 clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 36px);
+  padding: 0 clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 36px);
 
   box-shadow: 0 18px 46px rgba(3, 18, 36, .25);
   position: relative;
@@ -5260,9 +5284,11 @@ padding: 0 clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 
 .about-area.style-two .about-thumb img {
   border-radius: 20px;
 }
- .about-thumb img{
+
+.about-thumb img {
   border-radius: 50px;
- }
+}
+
 .about-area.style-two .about-thumb {
 
   position: relative;
@@ -6873,14 +6899,14 @@ padding: 0 clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 
 
 .services-min__title {
   margin: 0;
- font-family: 'LeagueSpartan-Bold';
+  font-family: 'LeagueSpartan-Bold';
   font-size: clamp(24px, 3vw, 34px);
   line-height: 1.12;
   color: #0b1220;
 }
 
 .services-min__kicker {
-    font-family: 'LeagueSpartan-medium';
+  font-family: 'LeagueSpartan-medium';
   margin: 8px auto 0;
   color: #5b6572;
   font-size: 15px;
@@ -6915,10 +6941,13 @@ padding: 0 clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 
 }
 
 /* Ícono más grande en desktop/tablet */
-.feature__icon{
-  width: 40px;          /* antes 32px */
-  height: 40px;         /* antes 32px */
-  flex: 0 0 40px;       /* mantené el mismo tamaño en el layout */
+.feature__icon {
+  width: 40px;
+  /* antes 32px */
+  height: 40px;
+  /* antes 32px */
+  flex: 0 0 40px;
+  /* mantené el mismo tamaño en el layout */
   object-fit: contain;
   margin-top: 2px;
 }
@@ -6926,7 +6955,7 @@ padding: 0 clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 
 /* Tipos compactos */
 .feature__title {
   margin: 0 0 4px;
- font-family: 'LeagueSpartan-Bold';
+  font-family: 'LeagueSpartan-Bold';
   font-size: 16px;
   line-height: 1.25;
   color: #0b1220;
@@ -6963,8 +6992,9 @@ padding: 0 clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 
     padding: 12px;
   }
 
-   .feature__icon{
-    width: 34px;        /* antes 28px */
+  .feature__icon {
+    width: 34px;
+    /* antes 28px */
     height: 34px;
     flex-basis: 34px;
   }
@@ -7044,142 +7074,208 @@ padding: 0 clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 36px) clamp(24px, 3.2vw, 
   }
 
 }
+
 /* ========= LANDINGS: ultra wide screens ========= */
-@media (min-width: 2000px){
+@media (min-width: 2000px) {
 
   /* Ampliamos el ancho útil del contenedor solo en los headers de landings */
   .breadcumb-area.cleaning .container,
   .breadcumb-area.safe .container,
   .breadcumb-area.paint .container,
-  .breadcumb-area.law .container{
-    max-width: 1720px;           /* 1320 → 1720 para que no se vea “chico” */
+  .breadcumb-area.law .container {
+    max-width: 1720px;
+    /* 1320 → 1720 para que no se vea “chico” */
   }
 
   /* Centramos el bloque hero vertical y horizontalmente */
   .hero-cleaning,
   .hero-safe,
   .hero-paint,
-  .hero-law{
+  .hero-law {
     min-height: 75vh;
     display: grid;
-    place-content: center;       /* centra el contenido dentro del hero */
+    place-content: center;
+    /* centra el contenido dentro del hero */
     gap: 12px;
   }
 
   /* Texto + escalado */
-  .hero-copy{ 
-    max-width: 20000px;           /* controla la línea para buena legibilidad */
-    margin: 0 auto;              /* centrado horizontal del bloque */
-    text-align: left;            /* mantené alineación izquierda */
+  .hero-copy {
+    max-width: 20000px;
+    /* controla la línea para buena legibilidad */
+    margin: 0 auto;
+    /* centrado horizontal del bloque */
+    text-align: left;
+    /* mantené alineación izquierda */
   }
 
-  .hero-copy h1{
+  .hero-copy h1 {
     /* 72–96px según ancho real; más grande y compacto */
     font-size: clamp(72px, 4.2vw, 96px);
     line-height: 1.06;
     letter-spacing: -.015em;
-    width: 70%;                  /* más ancho que antes (60%) */
+    width: 70%;
+    /* más ancho que antes (60%) */
     margin-top: 10px;
   }
 
-  .hero-copy p{
+  .hero-copy p {
     font-size: clamp(24px, 1.2vw, 28px);
     line-height: 1.45;
     width: 60%;
   }
 
-  .hero-bullets li{
+  .hero-bullets li {
     font-size: clamp(22px, 1.1vw, 26px);
     line-height: 1.35;
     margin-bottom: 8px;
   }
 
   /* Marca más grande */
-  .hero-brand img{
+  .hero-brand img {
     width: clamp(160px, 10vw, 220px);
   }
 
   /* CTA + chip más grandes y centrados a “ojo” */
-  .hero-cta{
+  .hero-cta {
     justify-content: flex-start;
     gap: 20px;
   }
 
-  .btn-cta{
+  .btn-cta {
     padding: 16px 28px;
     font-size: 18px;
-    box-shadow: 0 12px 26px rgba(0,0,0,.12);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, .12);
   }
 
-  .hero-chip{
-    top: 0;                      /* quitamos el nudge */
+  .hero-chip {
+    top: 0;
+    /* quitamos el nudge */
     font-size: 14px;
     padding: 14px 24px;
-    line-height: 1;              /* centra perfecto el texto en la píldora */
+    line-height: 1;
+    /* centra perfecto el texto en la píldora */
   }
 }
 
 /* Bonus: ajuste fino para 4K (opcional) */
-@media (min-width: 2560px){
+@media (min-width: 2560px) {
+
   .breadcumb-area.cleaning .container,
   .breadcumb-area.safe .container,
   .breadcumb-area.paint .container,
-  .breadcumb-area.law .container{
+  .breadcumb-area.law .container {
     max-width: 1860px;
   }
-  .hero-copy{ max-width: 1500px; }
-  .hero-copy h1{ font-size: clamp(84px, 4.6vw, 108px); width: 72%; }
-  .hero-copy p{ font-size: clamp(26px, 1.25vw, 30px); width: 62%; }
-  .hero-bullets li{ font-size: clamp(24px, 1.1vw, 28px); }
-  .btn-cta{ font-size: 20px; padding: 18px 32px; }
-  .hero-chip{ font-size: 15px; padding: 15px 26px; }
+
+  .hero-copy {
+    max-width: 1500px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(84px, 4.6vw, 108px);
+    width: 72%;
+  }
+
+  .hero-copy p {
+    font-size: clamp(26px, 1.25vw, 30px);
+    width: 62%;
+  }
+
+  .hero-bullets li {
+    font-size: clamp(24px, 1.1vw, 28px);
+  }
+
+  .btn-cta {
+    font-size: 20px;
+    padding: 18px 32px;
+  }
+
+  .hero-chip {
+    font-size: 15px;
+    padding: 15px 26px;
+  }
 }
 
 .breadcumb-area.about {
   padding: 230px 0 180px;
 }
-.breadcumb-area.proyectos{
+
+.breadcumb-area.proyectos {
   background: url(assets/images/grupoup/fondoproyectos.png);
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;          /* << llena el contenedor, puede recortar */
-  min-height: 480px;               /* asegura alto mínimo del banner */
-  padding: clamp(80px, 10vw, 160px) 0;  /* ajusta vertical según viewport */
+  background-size: cover;
+  /* << llena el contenedor, puede recortar */
+  min-height: 480px;
+  /* asegura alto mínimo del banner */
+  padding: clamp(80px, 10vw, 160px) 0;
+  /* ajusta vertical según viewport */
   position: relative;
-  display: flex;                 /* usamos flexbox para centrar */
-  align-items: center;           /* centra vertical */
-  justify-content: center;       /* centra horizontal */
-  text-align: center;            /* centra el texto */
+  display: flex;
+  /* usamos flexbox para centrar */
+  align-items: center;
+  /* centra vertical */
+  justify-content: center;
+  /* centra horizontal */
+  text-align: center;
+  /* centra el texto */
 }
 
 /* Contenido del texto (título y breadcrumbs) */
 .breadcumb-area.proyectos .breadcumb-content {
   color: #fff;
   text-align: center;
-  margin: 0;                    /* eliminamos márgenes superiores */
+  margin: 0;
+  /* eliminamos márgenes superiores */
 }
+
+@media (max-width: 1980px) {
+  .breadcumb-area.cleaning {
+    height: 90vh;
+
+  }
+  .breadcumb-area.safe {
+    height: 90vh;
+
+  }
+  .breadcumb-area.paint {
+    height: 90vh;
+
+  }
+  .breadcumb-area.law {
+    height: 90vh;
+
+  }
+}
+
 /* Fondo alternativo para celulares */
 @media (max-width: 480px) {
   .breadcumb-area.proyectos {
-    background-image: url(assets/images/grupoup/trabajoscelular.png); /* imagen optimizada para móvil */
-    background-position: center top;  /* centrado arriba */
-    background-size: cover;           /* llena toda la caja */
-     /* podés ajustar según diseño */
+    background-image: url(assets/images/grupoup/trabajoscelular.png);
+    /* imagen optimizada para móvil */
+    background-position: center top;
+    /* centrado arriba */
+    background-size: cover;
+    /* llena toda la caja */
+    /* podés ajustar según diseño */
     padding: 60px 0;
   }
 
-  .case-study-area{
-    padding:20px 0 90px!important;
+  .case-study-area {
+    padding: 20px 0 90px !important;
   }
 
-  
+
 }
+
 /* Si usás un contenedor interno con borde redondeado/sombra que “achica” el área,
    asegurate de que NO le esté tapando el fondo.  */
-.breadcumb-area.proyectos > .container{
+.breadcumb-area.proyectos>.container {
   position: relative;
   z-index: 1;
 }
+
 .breadcumb-content {
   margin-top: 10px;
   text-align: center;
@@ -7995,7 +8091,7 @@ li.list-arrow {
   height: 100%;
   display: block;
   object-fit: cover;
-object-position: 50% 30%;
+  object-position: 50% 30%;
 
   border-radius: 0;
   box-shadow: none;
@@ -9604,7 +9700,7 @@ button.icons {
   display: inline-block;
   background: #fff;
   border-radius: 5px;
- font-family: 'LeagueSpartan-Medium';
+  font-family: 'LeagueSpartan-Medium';
 }
 
 .case_study_menu ul li:hover {
@@ -9639,7 +9735,7 @@ button.icons {
 
 li.current_menu_item {
   color: #fff !important;
-  background: #16284e!important;
+  background: #16284e !important;
 }
 
 .case-study-single-box {
@@ -9673,7 +9769,7 @@ li.current_menu_item {
   font-size: 16px;
   line-height: 26px;
 
-   font-family: 'LeagueSpartan-Regular';
+  font-family: 'LeagueSpartan-Regular';
   margin: 0;
 }
 
@@ -10570,5 +10666,3 @@ p.blog-details-desc.three {
   top: -100%;
   opacity: 0;
 }
-
-
