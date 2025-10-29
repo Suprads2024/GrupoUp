@@ -2695,7 +2695,149 @@ a.active {
 /*=====================================
 <--  end solutek faq-area Css -->
 =======================================*/
+/* ===== TEASER · CONTROL QR (con íconos PNG) ===== */
+.gu-qr-teaser {
+  background: var(--gu-bg);
+  border: 1px solid var(--gu-border);
+  border-radius: 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  margin: clamp(32px, 5vw, 60px) auto;
+  padding: clamp(24px, 4vw, 50px);
+  width: min(1100px, 90%);
+}
 
+.gu-qr-teaser__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .gu-qr-teaser__grid {
+    grid-template-columns: 1.1fr 0.9fr; /* texto / imagen */
+    gap: 40px;
+  }
+}
+
+.gu-qr-teaser__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ===== Imagen a la derecha ===== */
+.gu-qr-teaser__media {
+  margin: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--gu-border);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .05);
+}
+
+.gu-qr-teaser__media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== Texto ===== */
+.gu-qr-teaser .kicker {
+  font-family: 'LeagueSpartan-Medium';
+  color: var(--gu-brand-ink);
+  margin-bottom: 6px;
+}
+
+.gu-qr-teaser .title {
+  font-family: 'LeagueSpartan-Bold';
+  font-size: clamp(22px, 2.5vw, 30px);
+  margin: 0 0 10px;
+  line-height: 1.2;
+}
+
+.gu-qr-teaser .highlight {
+  color: var(--gu-brand);
+}
+
+.gu-qr-teaser .lead {
+  font-family: 'LeagueSpartan-Regular';
+  color: var(--gu-ink-2);
+  font-size: clamp(15px, 1.6vw, 17px);
+  line-height: 1.6;
+  margin: 0 0 14px;
+}
+
+/* ===== Bullets con iconos PNG ===== */
+.gu-qr-teaser__bullets {
+  margin: 10px 0 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.gu-qr-teaser__bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: 'LeagueSpartan-Regular';
+  font-size: 15px;
+  color: var(--gu-ink-2);
+  list-style: none;
+}
+
+.bullet-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-top: 2px;
+  opacity: 0.9;
+}
+
+/* ===== Botones ===== */
+.gu-qr-teaser__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Botón base */
+.qr-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-family: 'LeagueSpartan-Bold';
+  font-size: 15px;
+  border: 2px solid #1DAE5A;
+  background: transparent;
+  color: #1DAE5A;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Hover → cambia a azul con texto blanco */
+.qr-btn:hover {
+  background:  #182653;
+  border-color:  #182653;
+  color: #fff;
+}
+
+/* Variante “ghost” (fondo verde, hover azul) */
+.qr-btn--ghost {
+  background: #1DAE5A;;
+  border: 2px solid #1DAE5A;;
+  color: #fff;
+}
+
+.qr-btn--ghost:hover {
+  background:  #182653;
+  border-color:  #182653;
+  color: #fff;
+}
 
 /*=====================================
 <--  start solutek testimonial-area Css -->
@@ -2707,7 +2849,7 @@ a.active {
   background-position: center;
   background-size: cover;
   margin: 0 50px 0;
-  padding: 120px 0 120px;
+  padding: 30px 0 120px;
 }
 
 .testi-single-box {

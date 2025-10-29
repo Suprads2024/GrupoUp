@@ -458,4 +458,12 @@ img {
 /* Anclas suaves (opcional, no JS) */
 :target {
     scroll-margin-top: 72px
+}/* Íconos PNG */
+.list-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  object-fit: contain;
+  opacity: 0.9;
+  margin-top: 2px;
 }
