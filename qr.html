@@ -1,0 +1,513 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-N3G8R64D');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Grupo Up - Nueva Web</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="56x56" href="assets/images/grupoup/iso.png">
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all">
+    <!-- carousel CSS -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css" media="all">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.css" type="text/css" media="all">
+    <!-- animated-text CSS -->
+    <link rel="stylesheet" href="assets/css/animated-text.css" type="text/css" media="all">
+    <!-- font-awesome CSS -->
+    <link rel="stylesheet" href="assets/css/all.min.css" type="text/css" media="all">
+    <!-- font-flaticon CSS -->
+    <link rel="stylesheet" href="assets/css/flaticon.css" type="text/css" media="all">
+    <!-- theme-default CSS -->
+    <link rel="stylesheet" href="assets/css/theme-default.css" type="text/css" media="all">
+    <!-- meanmenu CSS -->
+    <link rel="stylesheet" href="assets/css/meanmenu.min.css" type="text/css" media="all">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="assets/css/qr.css" type="text/css" media="all">
+    <!-- transitions CSS -->
+    <link rel="stylesheet" href="assets/css/owl.transitions.css" type="text/css" media="all">
+    <!-- venobox CSS -->
+    <link rel="stylesheet" href="venobox/venobox.css" type="text/css" media="all">
+    <!-- responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css" type="text/css" media="all">
+    <!-- modernizr js -->
+    <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3G8R64D" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <script>
+        document.addEventListener('click', function (e) {
+            const bar = e.target.closest('.mean-bar');
+            if (!bar) return;
+
+            // área donde MeanMenu dibuja el ::before (ajusta si querés)
+            const r = bar.getBoundingClientRect();
+            const tapX = e.clientX, tapY = e.clientY;
+            const hit = tapX < (r.left + 180) && tapY < (r.top + 180) && tapY > r.top;
+
+            // si no tocaste el botón hamburguesa y fue en esa zona: al index
+            const burger = bar.querySelector('.meanmenu-reveal');
+            if (hit && (!burger || !burger.contains(e.target))) {
+                window.location.href = 'index.html';
+            }
+        }, true);
+    </script>
+
+    <!-- WhatsApp flotante -->
+    <a class="wa-float" href="https://wa.me/3426287932?text=Hola%20Grupo%20UP!%20Quisiera%20un%20presupuesto."
+        target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+        <img src="assets/images/whatsapp.png" alt="" />
+        <span class="wa-tooltip">Chateá con nosotros</span>
+    </a>
+
+
+
+    <!--==================================================-->
+    <!-- Start solutek Main Menu Area -->
+    <!--==================================================-->
+    <div id="sticky-header" class="solutek_nav_manu">
+        <div class="container-fluid">
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-2">
+                    <div class="logo">
+                        <a class="logo_img" href="index.html" title="Grupo Up">
+                            <img src="assets/images/grupoup/logo2.png" alt="logo">
+                        </a>
+                        <a class="main_sticky" href="index.html" title="Grupo Up">
+                            <img src="assets/images/grupoup/grupoupblanco.png" alt="logo sticky">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <nav class="solutek_menu">
+                        <ul class="nav_scroll">
+                            <li><a href="cleaning-up.html">Cleaning Up</a></li>
+                            <li><a href="safe-up.html">Safe Up</a></li>
+                            <li><a href="paint-up.html">Paint Up</a></li>
+                            <li><a href="tu-derecho.html">Tu Derecho</a></li>
+                            <li><a href="#somos">Quienes Somos</a></li>
+                            <li><a href="proyectos.html">Proyectos Realizados</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-lg-2">
+                    <div class="header-btn">
+                        <a href="contact.html">Solicitar presupuesto <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- solutek Mobile Menu Area -->
+    <div class="mobile-menu-area sticky d-sm-block d-md-block d-lg-none">
+        <div class="mobile-menu">
+            <nav class="solutek_menu">
+                <ul class="nav_scroll">
+                    <li><a href="cleaning-up.html">Cleaning Up</a></li>
+                    <li><a href="safe-up.html">Safe Up</a></li>
+                    <li><a href="paint-up.html">Paint Up</a></li>
+                    <li><a href="tu-derecho.html">Tu Derecho</a></li>
+                    <li><a href="#somos">Quienes Somos</a></li>
+                    <li><a href="proyectos.html">Proyectos Realizados</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!--==================================================-->
+    <!-- End solutek Main Menu Area -->
+    <!--==================================================-->
+
+
+    <!--==================================================-->
+    <!-- Start Curser Section Here -->
+    <!--==================================================-->
+    <div class="curser"></div>
+    <div class="curser2"></div>
+    <!--==================================================-->
+    <!-- Ends Curser Section Here -->
+    <!--==================================================-->
+
+
+    <body class="theme-cleaning"><!-- cambiá la clase de tema si querés -->
+
+
+
+        <!-- ======================= HERO ======================= -->
+        <header class="qr-hero">
+            <div class="gu-container qr-hero-grid">
+                <div>
+                    <h1 class="headline">Control de ingreso y egreso con <span style="color:var(--gu-brand)">código
+                            QR</span></h1>
+                    <p class="sub">Registrá entradas y salidas desde el celular. Hora, ubicación y empleado quedan
+                        guardados al instante: <b>rápido, transparente y seguro</b>.</p>
+                    <div class="qr-hero-cta">
+
+                        <a class="qr-btn qr-btn--ghost" href="#como-funciona">Ver cómo funciona</a>
+                    </div>
+                </div>
+
+                <aside class="qr-mock" aria-label="Ejemplo de tarjeta QR">
+                    <div>
+                        <div class="card-title">Punto de marcado · Hospital Central</div>
+                        <div class="qr-card">
+                            <div class="qr-code">QR</div>
+                            <div class="qr-meta">
+                                <div><b>Ingreso</b> / <span class="muted">Salida</span></div>
+                                <div class="muted">Radio autorizado: 50 m</div>
+                                <ul class="qr-bullets">
+                                    <li><span class="qr-dot"></span><span>Verificación de geolocalización</span></li>
+                                    <li><span class="qr-dot"></span><span>Registro automático de fecha y hora</span>
+                                    </li>
+                                    <li><span class="qr-dot"></span><span>Identidad del empleado</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="list">
+                        <li><span class="icon">🕓</span><span>Marcación en segundos, sin planillas ni fichas.</span>
+                        </li>
+                        <li><span class="icon">🔐</span><span>Datos protegidos, acceso solo para autorizados.</span>
+                        </li>
+                        <li><span class="icon">📍</span><span>Solo valida si estás en el sitio de trabajo.</span></li>
+                    </ul>
+                </aside>
+            </div>
+        </header>
+
+        <!-- ======================= CÓMO FUNCIONA ======================= -->
+        <section id="como-funciona" class="section">
+            <div class="gu-container">
+                <div class="head">
+                    <div class="kicker">¿Qué es y cómo funciona?</div>
+                    <h2 class="title">Escaneás el QR y listo: el sistema registra todo</h2>
+                </div>
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>1) Un QR por sede o punto</h4>
+                        <p>Cada hospital, edificio u oficina tiene su QR visible en el acceso.</p>
+                    </div>
+                    <div class="card">
+                        <h4>2) Escaneo desde celular</h4>
+                        <p>El trabajador abre la cámara o app, escanea y el sistema toma los datos.</p>
+                    </div>
+                    <div class="card">
+                        <h4>3) Validación de geolocalización</h4>
+                        <p>Confirma que está en el lugar autorizado (por ejemplo, ≤ 50 metros).</p>
+                    </div>
+                    <div class="card">
+                        <h4>4) Registro seguro</h4>
+                        <p>Guarda fecha, hora, ubicación y empleado en una base protegida.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= GEOLOCALIZACIÓN ======================= -->
+        <section id="geolocalizacion" class="section">
+            <div class="gu-container">
+                <div class="head">
+                    <div class="kicker">Control inteligente</div>
+                    <h2 class="title">Geolocalización para evitar fraudes y marcaciones remotas</h2>
+                </div>
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>¿Por qué usarla?</h4>
+                        <p>Evita que alguien marque desde otro lugar o ceda el QR. Solo acepta si está dentro del área
+                            permitida.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Radio configurable</h4>
+                        <p>Definí el radio de validación por sede (ej.: 50 m). Flexible según operación.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= PREVENCIÓN ======================= -->
+        <section id="prevencion" class="section">
+            <div class="gu-container">
+                <div class="head">
+                    <div class="kicker">Prevención de irregularidades</div>
+                    <h2 class="title">Bloqueos y alertas automáticas</h2>
+                </div>
+                <div class="grid-3">
+                    <div class="card">
+                        <h4>Fuera de zona</h4>
+                        <p>El sistema alerta o rechaza si el QR se escanea lejos del punto.</p>
+                    </div>
+                    <div class="card">
+                        <h4>QR vencido o reutilizado</h4>
+                        <p>Se invalida y notifica al supervisor para revisión.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Patrones sospechosos</h4>
+                        <p>Detecta múltiples registros extraños de una misma persona.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= PANEL & ESTADÍSTICAS ======================= -->
+        <section id="panel" class="section">
+            <div class="gu-container">
+                <div class="head">
+                    <div class="kicker">Panel de control</div>
+                    <h2 class="title">Entradas, salidas y KPIs en tiempo real</h2>
+                </div>
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>Visibilidad operativa</h4>
+                        <ul class="list">
+                            <li><span class="icon">👥</span><span>Quiénes llegaron y se fueron.</span></li>
+                            <li><span class="icon">⏱️</span><span>Horarios de entrada/salida.</span></li>
+                            <li><span class="icon">⚠️</span><span>Tardanzas y ausencias.</span></li>
+                            <li><span class="icon">📊</span><span>Estadísticas por sede y por empleado.</span></li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Estrategias para reducir tardanzas</h4>
+                        <ul class="list">
+                            <li><span class="icon">🔔</span><span>Alertas automáticas por llegada tarde.</span></li>
+                            <li><span class="icon">🏅</span><span>Premios a la asistencia perfecta.</span></li>
+                            <li><span class="icon">📣</span><span>Aviso de retraso desde la app con motivo.</span></li>
+                            <li><span class="icon">🪪</span><span>Historial visible para cada empleado.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="kpis" style="margin-top:16px">
+                    <div class="kpi"><b>50 m</b><span class="muted">Radio de validación</span></div>
+                    <div class="kpi"><b>100%</b><span class="muted">Registros con hora/geo</span></div>
+                    <div class="kpi"><b>24/7</b><span class="muted">Disponibilidad</span></div>
+                    <div class="kpi"><b>+3</b><span class="muted">KPIs clave/empleado</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= BENEFICIOS ======================= -->
+        <section id="beneficios" class="section">
+            <div class="gu-container">
+                <div class="head">
+                    <div class="kicker">Resultados</div>
+                    <h2 class="title">Beneficios para la organización</h2>
+                </div>
+                <div class="grid-3">
+                    <div class="card">
+                        <h4>Simplicidad</h4>
+                        <p>Sin planillas ni fichas. Todo desde el celular.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Transparencia</h4>
+                        <p>Datos precisos y auditables. Menos confusiones.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Motivación</h4>
+                        <p>Mejor puntualidad y compromiso con incentivos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= PRIVACIDAD ======================= -->
+        <section id="privacidad" class="section">
+            <div class="gu-container">
+                <div class="head">
+                    <div class="kicker">Privacidad y confianza</div>
+                    <h2 class="title">Ubicación solo al escanear. Datos protegidos.</h2>
+                </div>
+                <div class="grid-2">
+                    <div class="card">
+                        <span class="badge">🔒 Política</span>
+                        <h4>Uso limitado de datos</h4>
+                        <p>Se registra ubicación <b>solo</b> al momento del escaneo. No hay rastreo continuo. Acceso
+                            restringido a personal autorizado.</p>
+                    </div>
+                    <div class="card">
+                        <span class="badge">🧾 Cumplimiento</span>
+                        <h4>Trazabilidad y auditoría</h4>
+                        <p>Historial íntegro de registros y eventos para revisiones o auditorías internas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= FAQs ======================= -->
+        <section id="faqs" class="section">
+            <div class="gu-container">
+                <div class="head">
+                    <div class="kicker">Preguntas frecuentes</div>
+                    <h2 class="title">Todo lo clave, en simple</h2>
+                </div>
+                <div class="faqs">
+                    <div class="faq">
+                        <h5>¿Necesita app dedicada?</h5>
+                        <p>No necesariamente. La cámara del celular puede abrir el enlace del QR; si usás app, sumás
+                            funciones como aviso de retraso.</p>
+                    </div>
+                    <div class="faq">
+                        <h5>¿Funciona sin internet?</h5>
+                        <p>Se recomienda conexión para validar geolocalización y registrar en tiempo real.</p>
+                    </div>
+                    <div class="faq">
+                        <h5>¿Se puede exportar la información?</h5>
+                        <p>Sí, con reportes por sede/empleado en rangos de fechas (CSV/Excel).</p>
+                    </div>
+                    <div class="faq">
+                        <h5>¿El radio de geolocalización es fijo?</h5>
+                        <p>No, es configurable por sitio (ej.: 30–100 m según el predio).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ===== FOOTER Grupo UP ===== -->
+        <footer class="footer-up" role="contentinfo">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Col 1: Marca / descripción / redes -->
+                    <div class="footer-col">
+                        <a href="index.html" class="footer-logo" aria-label="Ir al inicio">
+                            <img src="assets/images/grupoup/grupouplogo.png" alt="Grupo UP • Logotipo">
+                        </a>
+                        <p class="footer-text">
+                            Soluciones integrales y confiables para tu empresa. Compromiso, seguridad y calidad
+                            operacional en cada
+                            servicio.
+                        </p>
+
+                        <nav class="footer-social" aria-label="Redes sociales">
+
+                            <a href="https://www.instagram.com/cleaningup.limpieza/" aria-label="Instagram">
+                                <!-- icono IG -->
+                                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                                    <path fill="currentColor"
+                                        d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7m5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5m0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5M18 6.25a.75.75 0 1 1-.75.75.75.75 0 0 1 .75-.75Z" />
+                                </svg>
+                            </a>
+
+                        </nav>
+                    </div>
+
+                    <!-- Col 2: Espaciador (ocupa el lugar de "Navegación") -->
+                    <div class="footer-col footer-spacer" role="presentation" aria-hidden="true"></div>
+
+                    <!-- Col 3: Servicios -->
+                    <div class="footer-col">
+                        <h3 class="footer-title">Servicios</h3>
+                        <ul class="footer-links">
+                            <li><a href="safe-up.html">Safe Up</a></li>
+                            <li><a href="cleaning-up.html">Cleaning Up</a></li>
+                            <li><a href="paint-up.html">Paint Up</a></li>
+                            <li><a href="tu-derecho.html">Tu Derecho</a></li>
+
+                        </ul>
+                    </div>
+
+                    <!-- Col 4: Contacto / Newsletter -->
+                    <div class="footer-col">
+                        <h3 class="footer-title">Contacto</h3>
+                        <ul class="footer-contact">
+                            <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Santa Fe: Bv. Pellegrini 2876 <br>
+                                Rosario: Santiago 235</li>
+                            <li><i class="bi bi-telephone-fill" aria-hidden="true"></i> Santa Fe: 342-6287932 <br>
+                                Rosario: 341-2421456</li>
+
+                            <li><i class="bi bi-envelope-fill" aria-hidden="true"></i> Grupoup.servicios@gmail.com</li>
+                        </ul>
+
+
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>© <span id="year"></span> Grupo UP. Todos los derechos reservados.</p>
+                    <!--<ul class="legal-links">
+          <li><a href="privacy.html">Política de Privacidad</a></li>
+          <li><a href="terms.html">Términos y Condiciones</a></li>
+        </ul>-->
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            // Año dinámico en el copyright
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+
+
+
+
+
+
+
+
+        <!-- jquery js -->
+        <script src="assets/js/vendor/jquery-3.6.2.min.js"></script>
+        <!-- bootstrap js -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- carousel js -->
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <!-- counterup js -->
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <!-- waypoints js -->
+        <script src="assets/js/waypoints.min.js"></script>
+        <!-- wow js -->
+        <script src="assets/js/wow.js"></script>
+        <!-- imagesloaded js -->
+        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+        <!-- venobox js -->
+        <script src="venobox/venobox.js"></script>
+        <!--  animated-text js -->
+        <script src="assets/js/animated-text.js"></script>
+        <!-- venobox min js -->
+        <script src="venobox/venobox.min.js"></script>
+        <!-- isotope js -->
+        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <!-- jquery meanmenu js -->
+        <script src="assets/js/jquery.meanmenu.js"></script>
+        <!-- jquery scrollup js -->
+        <script src="assets/js/jquery.scrollUp.js"></script>
+        <script src="assets/js/jquery.barfiller.js"></script>
+        <script src="assets/js/typed.js"></script>
+        <!-- jquery js -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="assets/js/vanilla-tilt.min.js"></script>
+        <!-- partial -->
+
+        <!-- theme js -->
+        <script src="assets/js/theme.js"></script>
+
+    </body>
+
+</html>
