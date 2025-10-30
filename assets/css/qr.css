@@ -146,16 +146,7 @@ img {
     display: inline-block;
 }
 
-.qr-hero .headline::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 58%;
-    height: 6px;
-    background: var(--gu-brand);
-    border-radius: 6px;
-}
+
 
 .qr-hero .sub {
     font-weight: 600;
@@ -186,6 +177,7 @@ img {
 .qr-btn:hover{
     color: #102A75;
     text-decoration: none;
+    color: white;
 }
 
 .qr-btn--ghost {
