@@ -1846,6 +1846,7 @@ h4.about-title {
   position: relative;
   z-index: 1;
   overflow: hidden;
+  margin-top: 30px;
 }
 
 .service-single-box {

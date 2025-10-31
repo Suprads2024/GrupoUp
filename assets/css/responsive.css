@@ -4627,7 +4627,9 @@
     .faq-area.style-two .faq-thumb {
         right: 0;
     }
-
+.faq-area{
+    padding-top: 30px;
+}
     .blog-area.style-two h1.section-main-title2 {
         font-size: 36px;
     }
