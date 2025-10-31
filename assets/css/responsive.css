@@ -3965,6 +3965,11 @@
     gap: 20px; /* separa las cajas */
     justify-items: center;
   }
+
+
+  .comprende-panel{
+    padding-top: 40px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -5056,3 +5061,4 @@
         max-width: 1000px;
     }
 }
+

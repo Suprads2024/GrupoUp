@@ -1,0 +1,110 @@
+/* ===== Design tokens Grupo UP ===== */
+:root{
+  --gu-brand:#1DAE5A;
+  --gu-ink:#182653;
+  --gu-ink-2:#475569;
+  --gu-border:#e6e8ec;
+  --gu-surface:#ffffff;
+  --gu-bg:#f7f8fb;
+}
+
+.gu-careers{
+  background: var(--gu-bg);
+  padding: clamp(28px,5vw,60px) 16px;
+}
+.gu-careers__wrap{
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--gu-surface);
+  border:1px solid var(--gu-border);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.05);
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 26px;
+  padding: clamp(20px,3.5vw,40px);
+}
+@media (min-width: 992px){
+  .gu-careers__wrap{ grid-template-columns: 1.1fr 0.9fr; }
+}
+
+.gu-careers__intro h2{
+  color: var(--gu-ink);
+  font-family: 'LeagueSpartan-Bold', system-ui, sans-serif;
+  font-size: clamp(26px,3vw,36px);
+  margin: 0 0 8px;
+}
+.gu-careers__intro p{ color: var(--gu-ink-2); margin:0 0 10px; }
+.gu-careers__bullets{ margin:10px 0 0; padding:0; list-style:none; color:var(--gu-ink-2);}
+.gu-careers__bullets li{ margin:4px 0; }
+
+/* ===== Form ===== */
+.gu-form__grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:16px;
+}
+@media (min-width: 640px){
+  .gu-form__grid{ grid-template-columns: 1fr 1fr; }
+}
+.gu-field--full{ grid-column: 1 / -1; }
+
+.gu-field span{ display:block; font-size:14px; color:var(--gu-ink); margin-bottom:6px; }
+.gu-field input,
+.gu-field select,
+.gu-field textarea{
+  width:100%;
+  border:1px solid var(--gu-border);
+  background:#fff;
+  color:#111827;
+  border-radius:12px;
+  padding:12px 14px;
+  outline:none;
+  transition: border-color .2s, box-shadow .2s;
+  font: 400 15px/1.4 system-ui, sans-serif;
+}
+.gu-field textarea{ resize: vertical; }
+.gu-field input:focus,
+.gu-field select:focus,
+.gu-field textarea:focus{
+  border-color: var(--gu-brand);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--gu-brand) 20%, transparent);
+}
+
+/* ===== Upload (drag & drop) ===== */
+.gu-upload .gu-upload__box{
+  border: 2px dashed var(--gu-border);
+  border-radius: 14px;
+  background: #fff;
+  padding: 18px;
+  text-align:center;
+  color: var(--gu-ink-2);
+}
+.gu-upload .gu-upload__box strong{ color: var(--gu-ink); }
+.gu-upload .gu-upload__file{ margin-top:8px; font-size:14px; color: var(--gu-ink); }
+.gu-upload .linklike{
+  background:none; border:none; color: var(--gu-brand); cursor:pointer; text-decoration:underline; padding:0;
+}
+.gu-upload--hover .gu-upload__box{
+  border-color: var(--gu-brand);
+  background: color-mix(in srgb, var(--gu-brand) 6%, #fff);
+}
+
+/* ===== Checkbox + acciones ===== */
+.gu-check{ display:flex; align-items:center; gap:10px; font-size:14px; color:var(--gu-ink-2); }
+.gu-check input{ width:18px; height:18px; accent-color: var(--gu-brand); }
+
+.gu-actions{ display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+.gu-btn{
+  background: var(--gu-brand);
+  color:#fff;
+  border:none;
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-weight: 700;
+  cursor:pointer;
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--gu-brand) 35%, transparent);
+}
+.gu-btn:hover{ filter: brightness(0.95); }
+.gu-help{ margin:0; font-size:14px; color:var(--gu-ink-2); }
+.gu-help a{ color: var(--gu-ink); text-decoration: underline; }

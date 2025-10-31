@@ -212,12 +212,30 @@ img {
     gap: 14px;
     align-items: center;
 }
-
+/* ===== Contenedor principal del QR ===== */
+.qr-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  border: 1px solid var(--gu-border);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  width: fit-content;
+}
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .qr-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 .qr-code {
     width: 96px;
     height: 96px;
     border-radius: 12px;
-    border: 1px dashed var(--gu-border);
+  
     display: grid;
     place-items: center;
     font-size: 12px;
