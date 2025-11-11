@@ -52,12 +52,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $cabeceras .= "Reply-To: $email\r\n";
     $cabeceras .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-    // Enviar el correo
-    if (mail($para, $asunto, $contenido, $cabeceras)) {
-        echo "OK"; // Puedes usar esto para manejar respuestas AJAX
-    } else {
-        echo "Error al enviar el correo. Intente más tarde.";
-    }
+ // Enviar el correo
+if (mail($para, $asunto, $contenido, $cabeceras)) {
+    // Redirige a la página de agradecimiento
+    header("Location: gracias.html");
+    exit(); // 🔹 importante: detiene la ejecución
+} else {
+    echo "Error al enviar el correo. Intente más tarde.";
+}
+
 
 } else {
     echo "Acceso no permitido.";

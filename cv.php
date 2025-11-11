@@ -3,7 +3,7 @@
 // mailer.php — Envío de formulario de RRHH con adjunto PDF
 // -----------------------------------------------------------
 // Configuración
-$destinatario = "cv@grupoup.com.ar";  // 📩 Cambiá este correo
+$destinatario = "cleaningupsascv@gmail.com";  // 📩 Cambiá este correo
 $asunto       = "Nueva postulación desde Grupo UP";
 $max_size     = 5 * 1024 * 1024; // 5 MB
 
@@ -91,12 +91,16 @@ if ($tieneArchivo) {
     $message  = $body;
 }
 
-// Enviar correo
+
+
 if (mail($destinatario, $asunto, $message, $headers)) {
-    echo "<h2>✅ Gracias, tu postulación fue enviada correctamente.</h2>
-          <p>Podés volver al sitio o enviar otro formulario.</p>";
+    // Redirige a la página de gracias específica para CV
+    header("Location: graciascv.html");
+    exit;
 } else {
+    // Podés redirigir a una página de error o mostrar un mensaje simple
+    // header("Location: error.html"); exit;
     echo "<h2>❌ Error: no se pudo enviar el correo.</h2>
           <p>Intentá nuevamente más tarde.</p>";
 }
-?>
+
