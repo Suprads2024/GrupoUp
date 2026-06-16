@@ -3711,6 +3711,7 @@
 /* ====== Desktop: más espacio entre textos ====== */
 @media (min-width: 992px) {
     .hero-copy h1 {
+        font-size: 50px;
         margin-bottom: 10px;
         /* + aire bajo el título */
         line-height: 1.12;
